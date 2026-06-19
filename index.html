@@ -3,10 +3,10 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>ফরেক্স ট্রেডিং কোর্স</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,65 +16,88 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1451945866439481');
+
+fbq('init', 'YOUR_FACEBOOK_PIXEL_ID');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-<!-- End Facebook Pixel Code -->
+src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
 
-<!-- TikTok Pixel Code -->
+<!-- TikTok Pixel -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-  ttq.load('TIKTOK_PIXEL_ID');
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+  ttq.load('YOUR_TIKTOK_PIXEL_ID');
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- End TikTok Pixel Code -->
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Hind Siliguri',sans-serif}
-body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Hind Siliguri',sans-serif}
+html,body{overflow-x:hidden}
+body{background:#fff;color:#333;line-height:1.7}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
 @keyframes glow{0%,100%{box-shadow:0 0 20px rgba(5,150,105,0.4)}50%{box-shadow:0 0 40px rgba(5,150,105,0.75)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
 @keyframes shine{0%{left:-100%}100%{left:200%}}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-@keyframes successPop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+@keyframes tickPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes popIn{0%{opacity:0;transform:scale(0.8)}100%{opacity:1;transform:scale(1)}}
 
-.reveal{opacity:0}.reveal.show{animation:fadeUp .7s ease forwards}
+/* Reveal System - Mobile Safe */
+.reveal{opacity:1 !important;transform:translateY(0) !important;transition:opacity 0.6s ease, transform 0.6s ease}
+.reveal.anim-ready{opacity:0 !important;transform:translateY(25px) !important}
+.reveal.anim-ready.show{opacity:1 !important;transform:translateY(0) !important}
 
+/* Section Common */
 .section{padding:55px 0;width:100%}
 .sec-inner{max-width:680px;margin:0 auto;padding:0 20px}
 .sec-title{text-align:center;font-size:22px;font-weight:700;margin-bottom:8px}
 .sec-sub{text-align:center;font-size:13.5px;color:#888;margin-bottom:32px}
 .sec-title .bar{display:block;width:55px;height:4px;margin:12px auto 0;border-radius:5px}
 
-/* COUNTDOWN TIMER */
-#countdown-bar{
-    background:linear-gradient(90deg,#0f2c4a,#059669);
-    color:#fff;text-align:center;padding:12px 15px;font-weight:700;font-size:15px;
-    position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,0.2);
-    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;
+/* Countdown */
+.countdown-bar{background:linear-gradient(90deg,#dc2626,#b91c1c);color:#fff;padding:12px 15px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 4px 15px rgba(220,38,38,0.4)}
+.countdown-text{font-size:13px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+.countdown-timer{display:flex;justify-content:center;gap:8px;align-items:center}
+.cd-box{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:6px 10px;min-width:55px;text-align:center}
+.cd-num{font-size:20px;font-weight:700;line-height:1;animation:tickPulse 1s ease}
+.cd-lbl{font-size:10px;text-transform:uppercase;opacity:0.85;margin-top:2px}
+.cd-sep{font-size:20px;font-weight:700;opacity:0.6}
+
+/* Hero */
+.hero{background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 50%,#a7f3d0 100%);padding:50px 0 60px;text-align:center}
+.hero-inner{max-width:680px;margin:0 auto;padding:0 20px}
+.hero-tag{display:inline-block;background:rgba(5,150,105,0.15);color:#059669;font-size:13px;font-weight:600;padding:8px 18px;border-radius:50px;margin-bottom:20px}
+.hero-title{font-size:26px;font-weight:700;color:#0f2c4a;line-height:1.45;margin-bottom:14px}
+.hero-desc{font-size:15px;color:#065f46;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto}
+
+/* ===== VIDEO WRAP - FIXED FOR MOBILE WITH PADDING ===== */
+.video-wrap{
+    width:100%;
+    max-width:620px;
+    margin:0 auto 28px;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 15px 45px rgba(5,150,105,0.2);
+    position:relative;
+    background:#000;
+    padding:0;
 }
-#countdown-bar .cd-label{font-size:14px}
-.cd-box{background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:6px;margin:0 3px;font-size:17px;min-width:45px;display:inline-block}
-
-/* HERO */
-.hero{background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 50%,#a7f3d0 100%);padding:50px 0 60px;text-align:center;width:100%}
-.hero-tag{display:inline-block;background:rgba(5,150,105,0.15);color:#059669;font-size:13px;font-weight:600;padding:8px 18px;border-radius:50px;margin-bottom:20px;animation:fadeUp .6s ease}
-.hero-title{font-size:26px;font-weight:700;color:#0f2c4a;line-height:1.45;margin-bottom:14px;animation:fadeUp .8s ease}
-.hero-desc{font-size:15px;color:#065f46;margin-bottom:30px;animation:fadeUp 1s ease;max-width:500px;margin-left:auto;margin-right:auto}
-
-.video-wrap{width:100%;max-width:620px;margin:0 auto 28px;border-radius:16px;overflow:hidden;box-shadow:0 15px 45px rgba(5,150,105,0.2);position:relative;background:#000}
-.video-wrap iframe{width:100%;aspect-ratio:16/9;display:block;border:none}
-.video-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;font-size:11px;font-weight:700;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;box-shadow:0 5px 18px rgba(217,119,6,0.5);animation:pulse 2s infinite;z-index:2}
+.video-wrap iframe{
+    width:100%;
+    height:350px;
+    display:block;
+    border:none;
+    background:#000;
+}
 
 .offer-tag{background:#059669;color:#fff;font-size:13.5px;font-weight:600;padding:11px 22px;border-radius:50px;display:inline-block;margin-bottom:22px}
 
@@ -83,6 +106,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .btn-main::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,215,0,0.4),transparent);animation:shine 3s infinite}
 .btn-main:disabled{opacity:0.7;cursor:not-allowed;transform:none;animation:none}
 
+/* Strategies */
 .sec-strategy{background:#fff}
 .sec-strategy .sec-title{color:#059669}
 .sec-strategy .sec-title .bar{background:linear-gradient(90deg,#059669,#10b981)}
@@ -90,6 +114,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .card-pink:hover{transform:translateX(8px);box-shadow:0 10px 25px rgba(5,150,105,0.15)}
 .card-pink .ico{min-width:32px;height:32px;background:linear-gradient(135deg,#059669,#10b981);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0}
 
+/* Roadmap */
 .sec-roadmap{background:#f0fdfa}
 .sec-roadmap .sec-title{color:#0d9488}
 .sec-roadmap .sec-title .bar{background:linear-gradient(90deg,#0d9488,#14b8a6)}
@@ -99,6 +124,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .step-body:hover{transform:translateX(6px);box-shadow:0 10px 22px rgba(13,148,136,0.18)}
 .step-body h4{font-size:14.5px;color:#115e59;font-weight:600;margin:0}
 
+/* Support */
 .sec-support{background:linear-gradient(165deg,#f0f9ff,#e0f2fe)}
 .sec-support .sec-title{color:#0284c7}
 .sec-support .sec-title .bar{background:linear-gradient(90deg,#0284c7,#0ea5e9)}
@@ -107,6 +133,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .support-box h3{color:#0284c7;font-size:19px;margin-bottom:12px}
 .support-box p{font-size:14px;color:#555;max-width:450px;margin:0 auto}
 
+/* Who For */
 .sec-whofor{background:#fffbeb}
 .sec-whofor .sec-title{color:#d97706}
 .sec-whofor .sec-title .bar{background:linear-gradient(90deg,#d97706,#f59e0b)}
@@ -114,6 +141,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .card-yellow:hover{transform:translateX(7px);box-shadow:0 10px 22px rgba(217,119,6,0.18)}
 .card-yellow .ico{min-width:28px;height:28px;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;margin-top:2px}
 
+/* Not For */
 .sec-notfor{background:#fef2f2}
 .sec-notfor .sec-title{color:#dc2626}
 .sec-notfor .sec-title .bar{background:linear-gradient(90deg,#dc2626,#ef4444)}
@@ -121,6 +149,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .card-red:hover{transform:translateX(6px);box-shadow:0 10px 22px rgba(220,38,38,0.12)}
 .card-red .ico{min-width:26px;height:26px;background:#dc2626;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
 
+/* Review Slider */
 .sec-review{background:linear-gradient(165deg,#eef2ff,#e0e7ff);padding:55px 0;overflow:hidden}
 .sec-review .sec-title{color:#4f46e5}
 .sec-review .sec-title .bar{background:linear-gradient(90deg,#4f46e5,#6366f1)}
@@ -129,6 +158,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .slide-img{width:280px;height:360px;object-fit:cover;border-radius:16px;margin:0 12px;box-shadow:0 10px 30px rgba(79,70,229,0.15);border:3px solid #c7d2fe;transition:transform .3s}
 .slide-img:hover{transform:scale(1.04)}
 
+/* Stats */
 .sec-proof{background:linear-gradient(165deg,#0f2c4a,#0c1e33);padding:55px 0;text-align:center}
 .sec-proof .sec-title{color:#fcd34d}
 .sec-proof .sec-title .bar{background:linear-gradient(90deg,#fcd34d,#fbbf24)}
@@ -139,6 +169,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .proof-num{font-size:38px;font-weight:700;color:#fcd34d}
 .proof-label{font-size:13px;color:#cbd5e1;margin-top:5px}
 
+/* Pricing */
 .sec-pricing{background:linear-gradient(165deg,#059669 0%,#0f2c4a 100%);padding:55px 0;text-align:center}
 .price-card{background:linear-gradient(165deg,#ffffff,#f8fafc);border-radius:20px;padding:35px 26px;border:2px solid #fcd34d;box-shadow:0 20px 55px rgba(0,0,0,0.3);margin-bottom:22px}
 .price-badge{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;font-size:14px;font-weight:700;padding:10px 22px;border-radius:50px;display:inline-block;margin-bottom:20px;animation:pulse 2s infinite}
@@ -155,19 +186,36 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .payment-info{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #fcd34d;border-radius:18px;padding:24px 22px;text-align:left;margin-bottom:22px}
 .payment-info h3{color:#92400e;font-size:18px;margin-bottom:14px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
 .pay-method{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;margin-bottom:10px;font-size:14px}
-.pay-method:last-child{margin-bottom:0}
-.pay-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;flex-shrink:0}
+.pay-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:11px;flex-shrink:0}
 .pay-bkash{background:#e2136e}
 .pay-nagad{background:#ec4f1b}
 .pay-rocket{background:#8f3a99}
 .pay-note{text-align:center;font-size:13px;color:#78350f;margin-top:14px;padding-top:14px;border-top:1px dashed #fcd34d}
 
+/* ===== CHECKOUT FORM - FIXED FOR MOBILE ZOOM ===== */
 .checkout-card{background:#fff;border-radius:20px;padding:30px 22px;text-align:left;box-shadow:0 20px 55px rgba(0,0,0,0.2);border:2px solid #a7f3d0}
 .checkout-card h3{color:#059669;font-size:19px;margin-bottom:20px;text-align:center}
 .form-group{margin-bottom:16px}
 .form-group label{display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:7px}
-.form-group input{width:100%;padding:14px 16px;border:1.5px solid #d1fae5;border-radius:10px;font-size:14px;font-family:inherit;transition:all .3s;background:#f0fdf4}
-.form-group input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,0.15)}
+/* Input font-size 16px+ to prevent mobile zoom */
+.form-group input{
+    width:100%;
+    padding:14px 16px;
+    border:1.5px solid #d1fae5;
+    border-radius:10px;
+    font-size:16px; /* Minimum 16px to prevent iOS zoom */
+    font-family:inherit;
+    transition:all .3s;
+    background:#f0fdf4;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+.form-group input:focus{
+    outline:none;
+    border-color:#059669;
+    box-shadow:0 0 0 3px rgba(5,150,105,0.15);
+}
 .form-msg{padding:12px;border-radius:10px;font-size:13px;margin-top:15px;display:none;text-align:center}
 .form-msg.success{background:#dcfce7;color:#166534;border:1px solid #86efac;display:block}
 .form-msg.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;display:block}
@@ -176,64 +224,85 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
 .sec-finalcta h2{font-size:24px;color:#0f2c4a;margin-bottom:14px}
 .sec-finalcta p{font-size:14.5px;color:#065f46;margin-bottom:28px;max-width:450px;margin-left:auto;margin-right:auto}
 
-/* THANK YOU PAGE (Same File) */
-#thankYouPage{display:none;min-height:100vh;background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 50%,#a7f3d0 100%);padding:60px 20px;text-align:center}
-.ty-container{max-width:550px;margin:0 auto;background:#fff;border-radius:24px;padding:50px 30px;box-shadow:0 25px 60px rgba(5,150,105,0.2);border:3px solid #a7f3d0;animation:successPop 0.8s ease}
-.ty-icon{width:90px;height:90px;background:linear-gradient(135deg,#059669,#10b981);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:45px;color:#fff;animation:pulse 2s infinite;box-shadow:0 10px 30px rgba(5,150,105,0.3)}
-.ty-container h1{color:#059669;font-size:28px;margin-bottom:18px;font-weight:700}
-.ty-container p{font-size:16px;color:#333;line-height:1.8;margin-bottom:25px}
-.ty-info-box{background:#f0fdf4;border:1px dashed #059669;border-radius:12px;padding:18px;margin:20px 0;text-align:left}
-.ty-info-box p{font-size:14px;color:#065f46;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.ty-info-box p:last-child{margin-bottom:0}
-.ty-btn{background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;border:none;padding:14px 35px;font-size:15px;font-weight:700;border-radius:50px;cursor:pointer;font-family:inherit;transition:transform .3s;text-decoration:none;display:inline-block}
-.ty-btn:hover{transform:translateY(-3px)}
-
 .footer{background:#0f2c4a;color:#94a3b8;text-align:center;padding:30px 20px;font-size:12px}
 .footer p{margin-bottom:7px}
 
+/* Thank You Section */
+#thankYouSection{display:none;background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 100%);min-height:100vh;padding:60px 20px;text-align:center}
+#thankYouSection.show{display:block;animation:fadeUp .8s ease}
+.thank-card{background:#fff;max-width:600px;margin:0 auto;border-radius:24px;padding:50px 35px;box-shadow:0 25px 70px rgba(5,150,105,0.2);border:3px solid #a7f3d0;animation:popIn .8s ease}
+.success-icon{width:90px;height:90px;margin:0 auto 25px;background:linear-gradient(135deg,#059669,#10b981);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:45px;color:#fff;position:relative;animation:pulse 2s infinite, float 3s ease-in-out infinite}
+.thank-title{font-size:28px;font-weight:700;color:#0f2c4a;margin-bottom:15px}
+.thank-subtitle{font-size:18px;color:#059669;font-weight:600;margin-bottom:20px}
+.thank-msg{font-size:15px;color:#555;margin-bottom:30px;line-height:1.9;background:#f0fdf4;padding:22px;border-radius:14px;border:1px dashed #a7f3d0}
+.info-box{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fcd34d;border-radius:14px;padding:18px;margin-bottom:25px;text-align:left}
+.info-box h4{color:#92400e;font-size:15px;margin-bottom:10px}
+.info-box ul{list-style:none;padding:0}
+.info-box li{font-size:13.5px;color:#78350f;padding:5px 0;padding-left:22px;position:relative}
+.info-box li::before{content:"✓";position:absolute;left:0;color:#059669;font-weight:700}
+.btn-back{display:inline-block;background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;padding:14px 35px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;margin-top:10px;transition:transform .3s;border:none;cursor:pointer}
+.btn-back:hover{transform:translateY(-3px)}
+
+/* ===== MOBILE OPTIMIZATION ===== */
 @media(max-width:600px){
     .hero-title{font-size:21px}
     .price-new{font-size:44px}
-    .proof-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .thank-title{font-size:23px}
+    .thank-card{padding:35px 22px}
+    .success-icon{width:75px;height:75px;font-size:38px}
+    .cd-box{min-width:48px;padding:5px 8px}
+    .cd-num{font-size:18px}
+    /* Video with padding on mobile */
+    .video-wrap{padding:0 15px}
+    .video-wrap iframe{height:220px}
     .slide-img{width:220px;height:290px}
-    #countdown-bar{font-size:13px}
-    .cd-box{min-width:38px;font-size:15px;padding:3px 7px}
-    .ty-container{padding:35px 20px}
-    .ty-container h1{font-size:24px}
+    /* Form inputs stay 16px on mobile to prevent zoom */
+    .form-group input{font-size:16px}
 }
 </style>
 </head>
 <body>
 
-<!-- COUNTDOWN TIMER -->
-<div id="countdown-bar">
-    <span class="cd-label">🔥 অফার শেষ হতে বাকি:</span>
-    <span class="cd-box" id="hours">24</span><span>ঘন্টা</span>
-    <span class="cd-box" id="minutes">00</span><span>মিনিট</span>
-    <span class="cd-box" id="seconds">00</span><span>সেকেন্ড</span>
+<!-- Countdown -->
+<div class="countdown-bar" id="countdownBar">
+    <div class="countdown-text">⚡ অফার শেষ হতে বাকি — দ্রুত এনরোল করুন!</div>
+    <div class="countdown-timer">
+        <div class="cd-box"><div class="cd-num" id="cdHours">২৪</div><div class="cd-lbl">ঘন্টা</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><div class="cd-num" id="cdMinutes">০০</div><div class="cd-lbl">মিনিট</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><div class="cd-num" id="cdSeconds">০০</div><div class="cd-lbl">সেকেন্ড</div></div>
+    </div>
 </div>
 
-<!-- ===== LANDING PAGE ===== -->
-<div id="landingPage">
-    <!-- HERO -->
+<!-- Main Content -->
+<div id="mainContent">
+
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-inner">
-          
+           
             <h1 class="hero-title">কোনো জটিলতা নেই—সহজ ভাষায় শিখুন<br>প্রফেশনাল ফরেক্স ট্রেডিং</h1>
             <p class="hero-desc">৭০%+ উইন রেটের প্রুভেন স্ট্র্যাটেজি এবং লাইফটাইম সাপোর্ট কমিউনিটি</p>
 
+            <!-- Video - Fixed for Mobile with Padding -->
             <div class="video-wrap">
-                <iframe src="https://www.youtube.com/embed/PsYsJfguLtg?rel=0" title="কোর্স ভিডিও" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="video-badge">৮০%<br>ছাড়</div>
+                <iframe 
+                    src="https://www.youtube.com/embed/PsYsJfguLtg?rel=0&modestbranding=1&playsinline=1" 
+                    title="কোর্স ভিডিও" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
             </div>
 
-            <div class="offer-tag">🔥 এখনি ইনরোল করুন — ৮০% স্পেশাল ছাড়ে</div>
+            <div class="offer-tag">🔥 এখনি ইনরোল করুন — ৭০% স্পেশাল ছাড়ে</div>
             <br>
-            <a href="#pricing" class="btn-main track-btn">🚀 এখনই এনরোল করুন</a>
+            <a href="#pricing" class="btn-main btn-track" data-btn-name="Hero CTA">🚀 এখনই এনরোল করুন</a>
         </div>
     </section>
 
-    <!-- STRATEGIES -->
+    <!-- Strategies -->
     <section class="section sec-strategy">
         <div class="sec-inner">
             <h2 class="sec-title">এই কোর্সে যেসব স্ট্র্যাটেজি শিখবেন<span class="bar"></span></h2>
@@ -248,7 +317,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
         </div>
     </section>
 
-    <!-- ROADMAP -->
+    <!-- Roadmap -->
     <section class="section sec-roadmap">
         <div class="sec-inner">
             <h2 class="sec-title">🛠️ ফুল কোর্সের কমপ্লিট রোডম্যাপ<span class="bar"></span></h2>
@@ -263,7 +332,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
         </div>
     </section>
 
-    <!-- SUPPORT -->
+    <!-- Support -->
     <section class="section sec-support">
         <div class="sec-inner">
             <h2 class="sec-title">🤝 সাপোর্ট কমিউনিটি এক্সেস<span class="bar"></span></h2>
@@ -275,7 +344,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
         </div>
     </section>
 
-    <!-- WHO FOR -->
+    <!-- Who For -->
     <section class="section sec-whofor">
         <div class="sec-inner">
             <h2 class="sec-title">✅ কোর্সটি কাদের জন্য উপযুক্ত<span class="bar"></span></h2>
@@ -290,7 +359,7 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
         </div>
     </section>
 
-    <!-- NOT FOR -->
+    <!-- Not For -->
     <section class="section sec-notfor">
         <div class="sec-inner">
             <h2 class="sec-title">⚠️ কোর্সটি কাদের জন্য উপযুক্ত নয়<span class="bar"></span></h2>
@@ -302,26 +371,26 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
         </div>
     </section>
 
-    <!-- REVIEW SLIDER -->
+    <!-- Review Slider -->
     <section class="sec-review">
         <div class="sec-inner">
             <h2 class="sec-title">📈 আমাদের স্টুডেন্টদের সাকসেস ও রিভিউ<span class="bar"></span></h2>
-            <p class="sec-sub">কোর্সে জয়েন করে তারা কী বলছেন — দেখুন প্রুফ</p>
+            
         </div>
         <div style="overflow:hidden;width:100%;padding:10px 0;">
             <div class="slider-track" id="sliderTrack"></div>
         </div>
     </section>
 
-   
+    
 
-    <!-- PRICING + CHECKOUT -->
+    <!-- Pricing + Checkout -->
     <section class="sec-pricing" id="pricing">
         <div class="sec-inner">
             <div class="price-card reveal">
                 <div class="price-badge">🎯 ৭০% স্পেশাল ডিসকাউন্ট</div>
                 <p class="price-old-label">❌ নিয়মিত কোর্স ফি</p>
-                <div class="price-old">৪,৯৯০ টাকা</div>
+                <div class="price-old">৪,৯৯ টাকা</div>
                 <div class="price-disc">⚡ ৭০% ছাড়ে মাত্র</div>
                 <div class="price-new"><small>৳</small>১,৪৯০</div>
                 <div class="price-feat">
@@ -333,7 +402,6 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
                 <div class="price-warn">⚠️ স্পেশাল ডিসকাউন্টের এই অফারটি যেকোনো সময় শেষ হয়ে যাবে। নিজের স্কিল ও ক্যারিয়ারে ইনভেস্ট করার এখনই সেরা সুযোগ।</div>
             </div>
 
-            <!-- PAYMENT INFO -->
             <div class="payment-info reveal">
                 <h3>💳 পেমেন্ট করার নিয়ম</h3>
                 <div class="pay-method">
@@ -360,118 +428,152 @@ body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
                 <p class="pay-note">✅ ১,৪৯০ টাকা উপরের যেকোনো নম্বরে পেমেন্ট করে নিচের ফর্মটি পূরণ করুন। পেমেন্ট কনফার্ম হলে ১০ মিনিটের মধ্যে কোর্সের এক্সেস আপনার ইমেইলে পাঠানো হবে।</p>
             </div>
 
-            <!-- CHECKOUT FORM -->
             <div class="checkout-card reveal">
                 <h3>📝 চেকআউট ফর্ম</h3>
                 <form id="checkoutForm">
                     <div class="form-group">
                         <label for="name">পূর্ণ নাম *</label>
-                        <input type="text" id="name" name="name" required placeholder="আপনার পূর্ণ নাম লিখুন">
+                        <input type="text" id="name" name="name" required placeholder="আপনার পূর্ণ নাম লিখুন" autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="email">ইমেইল এড্রেস *</label>
-                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        <input type="email" id="email" name="email" required placeholder="example@email.com" autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="phone">যে নম্বর থেকে পেমেন্ট করেছেন *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+                        <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX" autocomplete="tel" pattern="[0-9]*" inputmode="numeric">
                     </div>
                     <div class="form-group">
                         <label for="trxid">ট্রানজেকশন আইডি (TrxID) *</label>
-                        <input type="text" id="trxid" name="trxid" required placeholder="পেমেন্টের TrxID দিন">
+                        <input type="text" id="trxid" name="trxid" required placeholder="পেমেন্টের TrxID দিন" autocomplete="off">
                     </div>
                     <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ অর্ডার সাবমিট করুন</button>
                     <div class="form-msg" id="formMsg"></div>
                 </form>
             </div>
+
         </div>
     </section>
 
-    <!-- FINAL CTA -->
+    <!-- Final CTA -->
     <section class="sec-finalcta">
         <div class="sec-inner">
             <h2>কোর্সে জয়েন করে আপনিও হয়ে উঠুন<br>প্রফেশনাল ও প্রফিটেবল ট্রেডার!</h2>
             <p>নিজের স্কিল ও ক্যারিয়ারে ইনভেস্ট করার এখনই সেরা সুযোগ। দেরি করবেন না!</p>
-            <a href="#pricing" class="btn-main track-btn">🚀 এখনই এনরোল করুন</a>
+            <a href="#pricing" class="btn-main btn-track" data-btn-name="Final CTA">🚀 এখনই এনরোল করুন</a>
         </div>
     </section>
+
+   
 </div>
 
-<!-- ===== THANK YOU PAGE (SAME FILE) ===== -->
-<div id="thankYouPage">
-    <div class="ty-container">
-        <div class="ty-icon">✓</div>
-        <h1>অসংখ্য ধন্যবাদ! 🎉</h1>
-        <p>কোর্সে ইনরোল করার জন্য আপনাকে অসংখ্য ধন্যবাদ। অনুগ্রহ করে অপেক্ষা করুন। পেমেন্ট ভেরিফাই করে আপনার সাথে যোগাযোগ করা হবে।</p>
+<!-- Thank You Section -->
+<div id="thankYouSection">
+    <div class="thank-card">
+        <div class="success-icon">✓</div>
+        <h1 class="thank-title">অসংখ্য ধন্যবাদ!</h1>
+        <p class="thank-subtitle">🎉 আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে</p>
         
-        <div class="ty-info-box">
-            <p>⏱️ ভেরিফিকেশন সময়: ১-৬ ঘন্টা</p>
-            <p>📧 কোর্স এক্সেস আপনার ইমেইলে পাঠানো হবে</p>
-            <p>📱 জরুরি প্রয়োজনে হোয়াটসঅ্যাপে যোগাযোগ করুন</p>
+        <div class="thank-msg">
+            কোর্সে ইনরোল করার জন্য আপনাকে <strong>অসংখ্য ধন্যবাদ</strong>। অনুগ্রহ করে অপেক্ষা করুন। পেমেন্ট ভেরিফাই করে আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
         </div>
         
-        <button class="ty-btn" onclick="location.reload()">🏠 হোমে ফিরে যান</button>
+        <div class="info-box">
+            <h4>📋 পরবর্তী ধাপসমূহ:</h4>
+            <ul>
+                <li>আমাদের টিম আপনার পেমেন্ট ভেরিফাই করবে</li>
+                <li>১-৬ ঘন্টার মধ্যে আপনার সাথে যোগাযোগ করা হবে</li>
+                <li>কোর্সের সম্পূর্ণ এক্সেস আপনার ইমেইলে পাঠানো হবে</li>
+                <li>প্রাইভেট কমিউনিটি গ্রুপের লিংক পেয়ে যাবেন</li>
+            </ul>
+        </div>
+        
+        <button onclick="location.reload()" class="btn-back">🔄 হোমপেজে ফিরে যান</button>
+        
+        <div style="margin-top:25px;padding-top:25px;border-top:1px dashed #cbd5e1">
+            <p style="font-size:13px;color:#666;margin-bottom:8px">📞 জরুরি প্রয়োজনে যোগাযোগ:</p>
+            <p style="font-size:14px"><a href="tel:+8801XXXXXXXXX" style="color:#059669;text-decoration:none;font-weight:600">+880 1XXX-XXXXXX</a></p>
+        </div>
     </div>
 </div>
 
-
 <script>
-// ==============================================
-// 1. COUNTDOWN TIMER (24 HOURS AUTO RESET)
-// ==============================================
-(function(){
-    let totalSeconds = 24 * 60 * 60;
-    const hEl = document.getElementById('hours');
-    const mEl = document.getElementById('minutes');
-    const sEl = document.getElementById('seconds');
+// Telegram Config
+const TELEGRAM_BOT_TOKEN = "8884740329:AAFGZaEyS0Pg7WPj8GoEFoGDNIJsKuFhxeA";
+const TELEGRAM_CHAT_ID = "5650952922";
+const PRODUCT_VALUE = 1490;
+const CURRENCY = "BDT";
+const PRODUCT_NAME = "Forex Trading Course";
+
+// Countdown Timer
+function toBnNum(num){
+    const en = "0123456789", bn = "০১২৩৪৫৬৭৮৯";
+    return String(num).split('').map(d => bn[en.indexOf(d)] || d).join('');
+}
+
+function startCountdown(){
+    let endTime = localStorage.getItem('cdEndTime');
+    const now = Date.now();
+    if(!endTime || parseInt(endTime) <= now){
+        endTime = now + (24 * 60 * 60 * 1000);
+        localStorage.setItem('cdEndTime', endTime);
+    }
+    endTime = parseInt(endTime);
     
     function update(){
-        const h = Math.floor(totalSeconds / 3600);
-        const m = Math.floor((totalSeconds % 3600) / 60);
-        const s = totalSeconds % 60;
-        hEl.textContent = h.toString().padStart(2,'0');
-        mEl.textContent = m.toString().padStart(2,'0');
-        sEl.textContent = s.toString().padStart(2,'0');
-        if(totalSeconds > 0) totalSeconds--;
-        else totalSeconds = 24 * 60 * 60;
+        const remaining = endTime - Date.now();
+        if(remaining <= 0){
+            endTime = Date.now() + (24 * 60 * 60 * 1000);
+            localStorage.setItem('cdEndTime', endTime);
+        }
+        const h = Math.floor(remaining / (1000 * 60 * 60));
+        const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((remaining % (1000 * 60)) / 1000);
+        document.getElementById('cdHours').textContent = toBnNum(String(h).padStart(2,'0'));
+        document.getElementById('cdMinutes').textContent = toBnNum(String(m).padStart(2,'0'));
+        document.getElementById('cdSeconds').textContent = toBnNum(String(s).padStart(2,'0'));
     }
     update();
     setInterval(update, 1000);
-})();
+}
+startCountdown();
 
-// ==============================================
-// 2. CONFIG
-// ==============================================
-const TELEGRAM_BOT_TOKEN = "8884740329:AAFGZaEyS0Pg7WPj8GoEFoGDNIJsKuFhxeA";
-const TELEGRAM_CHAT_ID = "5650952922";
-
-// ==============================================
-// 3. REVIEW SLIDER
-// ==============================================
+// Review Slider
 const reviewImages = [
+    "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(2).webp",
     "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(1).webp",
     "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM.webp",
-    "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(2).webp",
-  
+    
 ];
 const track = document.getElementById('sliderTrack');
 [...reviewImages, ...reviewImages].forEach(src => {
     const img = document.createElement('img');
-    img.src = src; img.alt = "Student Review"; img.className = "slide-img"; img.loading = "lazy";
+    img.src = src; img.alt = "Review"; img.className = "slide-img"; img.loading = "lazy";
     track.appendChild(img);
 });
 
-// ==============================================
-// 4. SCROLL REVEAL
-// ==============================================
-const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('show'); obs.unobserve(e.target)} });
-}, {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+// Scroll Reveal - Mobile Safe
+function initReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+        reveals.forEach(el => el.classList.add('anim-ready'));
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if(e.isIntersecting){
+                    e.target.classList.add('show');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+        reveals.forEach(el => obs.observe(el));
+        setTimeout(() => {
+            reveals.forEach(el => { el.classList.add('show'); el.classList.remove('anim-ready'); });
+        }, 5000);
+    }
+}
+initReveal();
 
-// ==============================================
-// 5. SMOOTH SCROLL
-// ==============================================
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',function(e){
         e.preventDefault();
@@ -480,32 +582,41 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     })
 });
 
-// ==============================================
-// 6. PIXEL TRACKING - BUTTON CLICKS
-// ==============================================
-document.querySelectorAll('.track-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-        if(typeof fbq !== 'undefined') fbq('track', 'AddToCart');
-        if(typeof ttq !== 'undefined') ttq.track('AddToCart');
+// Pixel Helpers
+function fireFB(event, data){ if(typeof fbq === 'function'){ try { fbq('track', event, data || {}); } catch(e){} } }
+function fireTT(event, data){ if(typeof ttq !== 'undefined'){ try { ttq.track(event, data || {}); } catch(e){} } }
+
+// Button Clicks
+document.querySelectorAll('.btn-track').forEach(btn => {
+    btn.addEventListener('click', function(){
+        const btnName = this.dataset.btnName || 'CTA Button';
+        fireFB('Lead', { content_name: btnName });
+        fireTT('ClickButton', { content_name: btnName });
     });
 });
 
-// ==============================================
-// 7. FORM SUBMIT → TELEGRAM + PIXEL + THANK YOU
-// ==============================================
+// Initiate Checkout
+let checkoutInitiated = false;
+document.querySelectorAll('#checkoutForm input').forEach(input => {
+    input.addEventListener('focus', function(){
+        if(!checkoutInitiated){
+            checkoutInitiated = true;
+            fireFB('InitiateCheckout', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
+            fireTT('InitiateCheckout', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
+        }
+    });
+});
+
+// Form Submit
 const form = document.getElementById('checkoutForm');
 const submitBtn = document.getElementById('submitBtn');
 const formMsg = document.getElementById('formMsg');
-const landingPage = document.getElementById('landingPage');
-const thankYouPage = document.getElementById('thankYouPage');
+const mainContent = document.getElementById('mainContent');
+const thankYouSection = document.getElementById('thankYouSection');
+const countdownBar = document.getElementById('countdownBar');
 
 form.addEventListener('submit', async function(e){
     e.preventDefault();
-    
-    // Fire InitiateCheckout Pixel
-    if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
-    if(typeof ttq !== 'undefined') ttq.track('InitiateCheckout');
-    
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
@@ -515,45 +626,24 @@ form.addEventListener('submit', async function(e){
     submitBtn.innerHTML = "⏳ প্রসেস করা হচ্ছে...";
     formMsg.style.display = "none";
     
-    const message = `
-🔥 নতুন ফরেক্স কোর্স এনরোলমেন্ট!
-━━━━━━━━━━━━━━━━━━━━
-👤 পূর্ণ নাম: ${name}
-📧 ইমেইল: ${email}
-📱 পেমেন্ট নম্বর: ${phone}
-🆔 ট্রানজেকশন আইডি: ${trxid}
-💰 পরিমাণ: ১,৪৯০ টাকা
-⏰ সময়: ${new Date().toLocaleString('bn-BD')}
-━━━━━━━━━━━━━━━━━━━━
-    `;
+    const message = `🔥 <b>নতুন ফরেক্স কোর্স এনরোলমেন্ট!</b>\n━━━━━━━━━━━━━━━━━━\n👤 <b>নাম:</b> ${name}\n📧 <b>ইমেইল:</b> ${email}\n📱 <b>পেমেন্ট নম্বর:</b> ${phone}\n🆔 <b>TrxID:</b> ${trxid}\n💰 <b>পরিমাণ:</b> ১,৪৯০ টাকা\n⏰ <b>সময়:</b> ${new Date().toLocaleString('en-GB', {timeZone:'Asia/Dhaka'})}\n━━━━━━━━━━━━━━━━━━`;
     
     try {
-        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: message,
-                parse_mode: 'HTML'
-            })
+            body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
         });
+        const data = await response.json();
         
-        // Fire Purchase Pixel
-        if(typeof fbq !== 'undefined') fbq('track', 'Purchase', {value: 1490, currency: 'BDT'});
-        if(typeof ttq !== 'undefined') ttq.track('Purchase', {value: 1490, currency: 'BDT'});
-        
-        formMsg.className = "form-msg success";
-        formMsg.textContent = "✅ আপনার অর্ডার সফলভাবে জমা হয়েছে!";
-        form.reset();
-        
-        // Show Thank You Page (Same File)
-        setTimeout(() => {
-            landingPage.style.display = 'none';
-            thankYouPage.style.display = 'block';
-            document.getElementById('countdown-bar').style.display = 'none';
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }, 2000);
-        
+        if(data.ok){
+            fireFB('Purchase', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
+            fireTT('CompletePayment', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
+            mainContent.style.display = 'none';
+            countdownBar.style.display = 'none';
+            thankYouSection.classList.add('show');
+            window.scrollTo(0, 0);
+        } else { throw new Error(data.description || 'Failed'); }
     } catch (err) {
         formMsg.className = "form-msg error";
         formMsg.textContent = "❌ কিছু সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।";
