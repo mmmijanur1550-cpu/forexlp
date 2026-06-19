@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ফরেক্স ট্রেডিং কোর্স</title>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1451945866439481');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- TikTok Pixel Code -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+  ttq.load('TIKTOK_PIXEL_ID');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- End TikTok Pixel Code -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Hind Siliguri',sans-serif}
+body{background:#fff;color:#333;line-height:1.7;overflow-x:hidden}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(5,150,105,0.4)}50%{box-shadow:0 0 40px rgba(5,150,105,0.75)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
+@keyframes shine{0%{left:-100%}100%{left:200%}}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes successPop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+
+.reveal{opacity:0}.reveal.show{animation:fadeUp .7s ease forwards}
+
+.section{padding:55px 0;width:100%}
+.sec-inner{max-width:680px;margin:0 auto;padding:0 20px}
+.sec-title{text-align:center;font-size:22px;font-weight:700;margin-bottom:8px}
+.sec-sub{text-align:center;font-size:13.5px;color:#888;margin-bottom:32px}
+.sec-title .bar{display:block;width:55px;height:4px;margin:12px auto 0;border-radius:5px}
+
+/* COUNTDOWN TIMER */
+#countdown-bar{
+    background:linear-gradient(90deg,#0f2c4a,#059669);
+    color:#fff;text-align:center;padding:12px 15px;font-weight:700;font-size:15px;
+    position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;
+}
+#countdown-bar .cd-label{font-size:14px}
+.cd-box{background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:6px;margin:0 3px;font-size:17px;min-width:45px;display:inline-block}
+
+/* HERO */
+.hero{background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 50%,#a7f3d0 100%);padding:50px 0 60px;text-align:center;width:100%}
+.hero-tag{display:inline-block;background:rgba(5,150,105,0.15);color:#059669;font-size:13px;font-weight:600;padding:8px 18px;border-radius:50px;margin-bottom:20px;animation:fadeUp .6s ease}
+.hero-title{font-size:26px;font-weight:700;color:#0f2c4a;line-height:1.45;margin-bottom:14px;animation:fadeUp .8s ease}
+.hero-desc{font-size:15px;color:#065f46;margin-bottom:30px;animation:fadeUp 1s ease;max-width:500px;margin-left:auto;margin-right:auto}
+
+.video-wrap{width:100%;max-width:620px;margin:0 auto 28px;border-radius:16px;overflow:hidden;box-shadow:0 15px 45px rgba(5,150,105,0.2);position:relative;background:#000}
+.video-wrap iframe{width:100%;aspect-ratio:16/9;display:block;border:none}
+.video-badge{position:absolute;top:14px;right:14px;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;font-size:11px;font-weight:700;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2;box-shadow:0 5px 18px rgba(217,119,6,0.5);animation:pulse 2s infinite;z-index:2}
+
+.offer-tag{background:#059669;color:#fff;font-size:13.5px;font-weight:600;padding:11px 22px;border-radius:50px;display:inline-block;margin-bottom:22px}
+
+.btn-main{background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;border:none;padding:17px 42px;font-size:17px;font-weight:700;border-radius:50px;cursor:pointer;font-family:inherit;animation:glow 2.5s infinite;transition:transform .3s;position:relative;overflow:hidden;display:inline-block;text-decoration:none}
+.btn-main:hover{transform:translateY(-3px)}
+.btn-main::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,215,0,0.4),transparent);animation:shine 3s infinite}
+.btn-main:disabled{opacity:0.7;cursor:not-allowed;transform:none;animation:none}
+
+.sec-strategy{background:#fff}
+.sec-strategy .sec-title{color:#059669}
+.sec-strategy .sec-title .bar{background:linear-gradient(90deg,#059669,#10b981)}
+.card-pink{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #a7f3d0;border-radius:14px;padding:16px 20px;margin-bottom:14px;font-size:14.5px;font-weight:500;color:#065f46;transition:all .3s}
+.card-pink:hover{transform:translateX(8px);box-shadow:0 10px 25px rgba(5,150,105,0.15)}
+.card-pink .ico{min-width:32px;height:32px;background:linear-gradient(135deg,#059669,#10b981);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0}
+
+.sec-roadmap{background:#f0fdfa}
+.sec-roadmap .sec-title{color:#0d9488}
+.sec-roadmap .sec-title .bar{background:linear-gradient(90deg,#0d9488,#14b8a6)}
+.roadmap-step{display:flex;gap:14px;margin-bottom:16px}
+.step-num{min-width:40px;height:40px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 6px 14px rgba(13,148,136,0.3);flex-shrink:0}
+.step-body{background:linear-gradient(135deg,#ccfbf1,#99f6e4);border:1px solid #5eead4;border-radius:12px;padding:14px 18px;flex:1;transition:all .3s}
+.step-body:hover{transform:translateX(6px);box-shadow:0 10px 22px rgba(13,148,136,0.18)}
+.step-body h4{font-size:14.5px;color:#115e59;font-weight:600;margin:0}
+
+.sec-support{background:linear-gradient(165deg,#f0f9ff,#e0f2fe)}
+.sec-support .sec-title{color:#0284c7}
+.sec-support .sec-title .bar{background:linear-gradient(90deg,#0284c7,#0ea5e9)}
+.support-box{background:#fff;border-radius:18px;padding:32px 24px;text-align:center;box-shadow:0 14px 35px rgba(2,132,199,0.12)}
+.support-icon{font-size:52px;margin-bottom:14px;animation:float 3.5s ease-in-out infinite;display:block}
+.support-box h3{color:#0284c7;font-size:19px;margin-bottom:12px}
+.support-box p{font-size:14px;color:#555;max-width:450px;margin:0 auto}
+
+.sec-whofor{background:#fffbeb}
+.sec-whofor .sec-title{color:#d97706}
+.sec-whofor .sec-title .bar{background:linear-gradient(90deg,#d97706,#f59e0b)}
+.card-yellow{display:flex;align-items:flex-start;gap:13px;background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fcd34d;border-radius:13px;padding:16px 18px;margin-bottom:14px;font-size:13.5px;font-weight:500;color:#78350f;transition:all .3s}
+.card-yellow:hover{transform:translateX(7px);box-shadow:0 10px 22px rgba(217,119,6,0.18)}
+.card-yellow .ico{min-width:28px;height:28px;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;margin-top:2px}
+
+.sec-notfor{background:#fef2f2}
+.sec-notfor .sec-title{color:#dc2626}
+.sec-notfor .sec-title .bar{background:linear-gradient(90deg,#dc2626,#ef4444)}
+.card-red{display:flex;align-items:flex-start;gap:13px;background:#fff;border:1px solid #fecaca;border-left:4px solid #dc2626;border-radius:10px;padding:16px 18px;margin-bottom:14px;font-size:13.5px;color:#666;transition:all .3s}
+.card-red:hover{transform:translateX(6px);box-shadow:0 10px 22px rgba(220,38,38,0.12)}
+.card-red .ico{min-width:26px;height:26px;background:#dc2626;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+
+.sec-review{background:linear-gradient(165deg,#eef2ff,#e0e7ff);padding:55px 0;overflow:hidden}
+.sec-review .sec-title{color:#4f46e5}
+.sec-review .sec-title .bar{background:linear-gradient(90deg,#4f46e5,#6366f1)}
+.slider-track{display:flex;width:max-content;animation:scroll 25s linear infinite}
+.slider-track:hover{animation-play-state:paused}
+.slide-img{width:280px;height:360px;object-fit:cover;border-radius:16px;margin:0 12px;box-shadow:0 10px 30px rgba(79,70,229,0.15);border:3px solid #c7d2fe;transition:transform .3s}
+.slide-img:hover{transform:scale(1.04)}
+
+.sec-proof{background:linear-gradient(165deg,#0f2c4a,#0c1e33);padding:55px 0;text-align:center}
+.sec-proof .sec-title{color:#fcd34d}
+.sec-proof .sec-title .bar{background:linear-gradient(90deg,#fcd34d,#fbbf24)}
+.sec-proof .sec-sub{color:#cbd5e1}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}
+.proof-card{background:rgba(255,255,255,0.07);border:1px solid rgba(252,211,77,0.25);border-radius:16px;padding:24px 16px;color:#fff;transition:all .3s}
+.proof-card:hover{transform:translateY(-6px);background:rgba(255,255,255,0.12)}
+.proof-num{font-size:38px;font-weight:700;color:#fcd34d}
+.proof-label{font-size:13px;color:#cbd5e1;margin-top:5px}
+
+.sec-pricing{background:linear-gradient(165deg,#059669 0%,#0f2c4a 100%);padding:55px 0;text-align:center}
+.price-card{background:linear-gradient(165deg,#ffffff,#f8fafc);border-radius:20px;padding:35px 26px;border:2px solid #fcd34d;box-shadow:0 20px 55px rgba(0,0,0,0.3);margin-bottom:22px}
+.price-badge{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;font-size:14px;font-weight:700;padding:10px 22px;border-radius:50px;display:inline-block;margin-bottom:20px;animation:pulse 2s infinite}
+.price-old-label{font-size:14px;color:#888}
+.price-old{font-size:22px;color:#999;text-decoration:line-through;margin-bottom:8px}
+.price-disc{background:linear-gradient(135deg,#fef3c7,#fde68a);color:#78350f;font-size:14px;font-weight:700;padding:9px 20px;border-radius:10px;display:inline-block;margin:12px 0}
+.price-new{font-size:54px;font-weight:700;color:#059669;margin:10px 0}
+.price-new small{font-size:26px}
+.price-feat{background:#f0fdf4;border-radius:14px;padding:20px;text-align:left;margin:22px 0}
+.price-feat p{font-size:14px;color:#333;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.price-feat p::before{content:"✓";color:#059669;font-weight:700;font-size:16px}
+.price-warn{margin-top:18px;background:#fffbeb;border:1px dashed #f59e0b;padding:14px;border-radius:12px;font-size:12.5px;color:#78350f;animation:blink 3s infinite}
+
+.payment-info{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #fcd34d;border-radius:18px;padding:24px 22px;text-align:left;margin-bottom:22px}
+.payment-info h3{color:#92400e;font-size:18px;margin-bottom:14px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+.pay-method{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;margin-bottom:10px;font-size:14px}
+.pay-method:last-child{margin-bottom:0}
+.pay-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;flex-shrink:0}
+.pay-bkash{background:#e2136e}
+.pay-nagad{background:#ec4f1b}
+.pay-rocket{background:#8f3a99}
+.pay-note{text-align:center;font-size:13px;color:#78350f;margin-top:14px;padding-top:14px;border-top:1px dashed #fcd34d}
+
+.checkout-card{background:#fff;border-radius:20px;padding:30px 22px;text-align:left;box-shadow:0 20px 55px rgba(0,0,0,0.2);border:2px solid #a7f3d0}
+.checkout-card h3{color:#059669;font-size:19px;margin-bottom:20px;text-align:center}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:7px}
+.form-group input{width:100%;padding:14px 16px;border:1.5px solid #d1fae5;border-radius:10px;font-size:14px;font-family:inherit;transition:all .3s;background:#f0fdf4}
+.form-group input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,0.15)}
+.form-msg{padding:12px;border-radius:10px;font-size:13px;margin-top:15px;display:none;text-align:center}
+.form-msg.success{background:#dcfce7;color:#166534;border:1px solid #86efac;display:block}
+.form-msg.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;display:block}
+
+.sec-finalcta{background:linear-gradient(165deg,#ecfdf5,#d1fae5);padding:60px 0;text-align:center}
+.sec-finalcta h2{font-size:24px;color:#0f2c4a;margin-bottom:14px}
+.sec-finalcta p{font-size:14.5px;color:#065f46;margin-bottom:28px;max-width:450px;margin-left:auto;margin-right:auto}
+
+/* THANK YOU PAGE (Same File) */
+#thankYouPage{display:none;min-height:100vh;background:linear-gradient(165deg,#ecfdf5 0%,#d1fae5 50%,#a7f3d0 100%);padding:60px 20px;text-align:center}
+.ty-container{max-width:550px;margin:0 auto;background:#fff;border-radius:24px;padding:50px 30px;box-shadow:0 25px 60px rgba(5,150,105,0.2);border:3px solid #a7f3d0;animation:successPop 0.8s ease}
+.ty-icon{width:90px;height:90px;background:linear-gradient(135deg,#059669,#10b981);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:45px;color:#fff;animation:pulse 2s infinite;box-shadow:0 10px 30px rgba(5,150,105,0.3)}
+.ty-container h1{color:#059669;font-size:28px;margin-bottom:18px;font-weight:700}
+.ty-container p{font-size:16px;color:#333;line-height:1.8;margin-bottom:25px}
+.ty-info-box{background:#f0fdf4;border:1px dashed #059669;border-radius:12px;padding:18px;margin:20px 0;text-align:left}
+.ty-info-box p{font-size:14px;color:#065f46;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.ty-info-box p:last-child{margin-bottom:0}
+.ty-btn{background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;border:none;padding:14px 35px;font-size:15px;font-weight:700;border-radius:50px;cursor:pointer;font-family:inherit;transition:transform .3s;text-decoration:none;display:inline-block}
+.ty-btn:hover{transform:translateY(-3px)}
+
+.footer{background:#0f2c4a;color:#94a3b8;text-align:center;padding:30px 20px;font-size:12px}
+.footer p{margin-bottom:7px}
+
+@media(max-width:600px){
+    .hero-title{font-size:21px}
+    .price-new{font-size:44px}
+    .proof-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .slide-img{width:220px;height:290px}
+    #countdown-bar{font-size:13px}
+    .cd-box{min-width:38px;font-size:15px;padding:3px 7px}
+    .ty-container{padding:35px 20px}
+    .ty-container h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- COUNTDOWN TIMER -->
+<div id="countdown-bar">
+    <span class="cd-label">🔥 অফার শেষ হতে বাকি:</span>
+    <span class="cd-box" id="hours">24</span><span>ঘন্টা</span>
+    <span class="cd-box" id="minutes">00</span><span>মিনিট</span>
+    <span class="cd-box" id="seconds">00</span><span>সেকেন্ড</span>
+</div>
+
+<!-- ===== LANDING PAGE ===== -->
+<div id="landingPage">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+          
+            <h1 class="hero-title">কোনো জটিলতা নেই—সহজ ভাষায় শিখুন<br>প্রফেশনাল ফরেক্স ট্রেডিং</h1>
+            <p class="hero-desc">৭০%+ উইন রেটের প্রুভেন স্ট্র্যাটেজি এবং লাইফটাইম সাপোর্ট কমিউনিটি</p>
+
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/PsYsJfguLtg?rel=0" title="কোর্স ভিডিও" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-badge">৮০%<br>ছাড়</div>
+            </div>
+
+            <div class="offer-tag">🔥 এখনি ইনরোল করুন — ৮০% স্পেশাল ছাড়ে</div>
+            <br>
+            <a href="#pricing" class="btn-main track-btn">🚀 এখনই এনরোল করুন</a>
+        </div>
+    </section>
+
+    <!-- STRATEGIES -->
+    <section class="section sec-strategy">
+        <div class="sec-inner">
+            <h2 class="sec-title">এই কোর্সে যেসব স্ট্র্যাটেজি শিখবেন<span class="bar"></span></h2>
+            <p class="sec-sub">প্রতিটি স্ট্র্যাটেজি বাস্তব চার্টে প্র্যাকটিক্যালি শেখানো হবে</p>
+            <div class="card-pink reveal"><span class="ico">✓</span>Order Block Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>FVG Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>Order Flow Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>Breaker Block Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>Rejection Block Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>AMD Trading Strategy</div>
+            <div class="card-pink reveal"><span class="ico">✓</span>৭০%+ Win Proven Trading Strategy</div>
+        </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section sec-roadmap">
+        <div class="sec-inner">
+            <h2 class="sec-title">🛠️ ফুল কোর্সের কমপ্লিট রোডম্যাপ<span class="bar"></span></h2>
+            <p class="sec-sub">A to Z গাইডলাইন — শুরু থেকে শেষ পর্যন্ত</p>
+            <div class="roadmap-step reveal"><div class="step-num">1</div><div class="step-body"><h4>Market Structure Mapping</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">2</div><div class="step-body"><h4>IDM, BOS, CHOCH</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">3</div><div class="step-body"><h4>Valid POI Identify</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">4</div><div class="step-body"><h4>Liquidity Identify</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">5</div><div class="step-body"><h4>Multi Time Frame Alignment</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">6</div><div class="step-body"><h4>Easy Trade Setup</h4></div></div>
+            <div class="roadmap-step reveal"><div class="step-num">7</div><div class="step-body"><h4>Risk Management</h4></div></div>
+        </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="section sec-support">
+        <div class="sec-inner">
+            <h2 class="sec-title">🤝 সাপোর্ট কমিউনিটি এক্সেস<span class="bar"></span></h2>
+            <div class="support-box reveal">
+                <span class="support-icon">👥</span>
+                <h3>প্রাইভেট ফোরাম এক্সেস</h3>
+                <p>কোর্সে ইনরোল করা মেম্বারদের জন্য প্রাইভেট ফোরাম, যেখানে কোর্সে রিলেটেড যেকোনো প্রশ্ন করলে তার উত্তর পেয়ে যাবেন।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO FOR -->
+    <section class="section sec-whofor">
+        <div class="sec-inner">
+            <h2 class="sec-title">✅ কোর্সটি কাদের জন্য উপযুক্ত<span class="bar"></span></h2>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা একদম স্ক্র্যাচ থেকে ট্রেডিং শিখতে চান এবং স্টেপ-বাই-স্টেপ প্রফেশনাল গাইডলাইন খুঁজছেন।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা ইতিমধ্যেই মার্কেটে ট্রেড করছেন কিন্তু সঠিক স্ট্র্যাটেজি না জানায় বারবার লস করছেন।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা ক্যাপিটাল সুরক্ষিত রেখে সঠিক রিস্ক ম্যানেজমেন্ট ও ট্রেডিং সাইকোলজি আয়ত্ত করতে চান।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা ট্রেডিংকে দীর্ঘমেয়াদি ও সম্মানজনক ক্যারিয়ার হিসেবে গড়ে তুলতে চান।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা চাকরি বা পড়াশোনার পাশাপাশি ঘরে বসে আন্তর্জাতিক মার্কেট থেকে ইনকাম করতে চান।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা প্রপ ফার্ম অ্যাকাউন্ট সফলভাবে পাস করার প্রফেশনাল স্কিল অর্জন করতে চান।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা মার্কেটের লিকুইডিটি, অর্ডার ব্লক ও মার্কেট মেকারদের মুভমেন্ট বুঝতে চান।</div>
+            <div class="card-yellow reveal"><span class="ico">✓</span>যারা শুধু থিওরি নয়, প্র্যাকটিক্যাল চার্ট অ্যানালাইসিস শিখতে আগ্রহী।</div>
+        </div>
+    </section>
+
+    <!-- NOT FOR -->
+    <section class="section sec-notfor">
+        <div class="sec-inner">
+            <h2 class="sec-title">⚠️ কোর্সটি কাদের জন্য উপযুক্ত নয়<span class="bar"></span></h2>
+            <div class="card-red reveal"><span class="ico">✕</span>যারা ফরেক্সকে রাতারাতি কোটিপতি হওয়ার সহজ মাধ্যম মনে করেন এবং কোনো পরিশ্রম ছাড়াই ধনী হতে চান।</div>
+            <div class="card-red reveal"><span class="ico">✕</span>যারা পর্যাপ্ত সময় দিয়ে শিখতে চান না এবং ডেমো বা ব্যাকটেস্টিংয়ে প্র্যাকটিস করার মানসিকতা রাখেন না।</div>
+            <div class="card-red reveal"><span class="ico">✕</span>যারা অল্প শিখেই কোনো অভিজ্ঞতা ছাড়া সরাসরি লাইভ মার্কেটে ট্রেড শুরু করতে তাড়াহুড়ো করেন।</div>
+            <div class="card-red reveal"><span class="ico">✕</span>যারা রিস্ক ম্যানেজমেন্ট ফলো না করে অতিরিক্ত ঝুঁকি নিয়ে গ্যাম্বলিং করার মানসিকতা রাখেন।</div>
+            <div class="card-red reveal"><span class="ico">✕</span>যারা কোনো শ্রম বা সময় না দিয়ে কেবল সিগন্যাল বা শর্টকাটে মার্কেটে টিকে থাকতে চান।</div>
+        </div>
+    </section>
+
+    <!-- REVIEW SLIDER -->
+    <section class="sec-review">
+        <div class="sec-inner">
+            <h2 class="sec-title">📈 আমাদের স্টুডেন্টদের সাকসেস ও রিভিউ<span class="bar"></span></h2>
+            <p class="sec-sub">কোর্সে জয়েন করে তারা কী বলছেন — দেখুন প্রুফ</p>
+        </div>
+        <div style="overflow:hidden;width:100%;padding:10px 0;">
+            <div class="slider-track" id="sliderTrack"></div>
+        </div>
+    </section>
+
+   
+
+    <!-- PRICING + CHECKOUT -->
+    <section class="sec-pricing" id="pricing">
+        <div class="sec-inner">
+            <div class="price-card reveal">
+                <div class="price-badge">🎯 ৭০% স্পেশাল ডিসকাউন্ট</div>
+                <p class="price-old-label">❌ নিয়মিত কোর্স ফি</p>
+                <div class="price-old">৪,৯৯০ টাকা</div>
+                <div class="price-disc">⚡ ৭০% ছাড়ে মাত্র</div>
+                <div class="price-new"><small>৳</small>১,৪৯০</div>
+                <div class="price-feat">
+                    <p>৭টি প্রুভেন ট্রেডিং স্ট্র্যাটেজি</p>
+                    <p>A to Z সম্পূর্ণ রোডম্যাপ</p>
+                    <p>প্রাইভেট সাপোর্ট কমিউনিটি</p>
+                    <p>লাইফটাইম আপডেট ও সাপোর্ট</p>
+                </div>
+                <div class="price-warn">⚠️ স্পেশাল ডিসকাউন্টের এই অফারটি যেকোনো সময় শেষ হয়ে যাবে। নিজের স্কিল ও ক্যারিয়ারে ইনভেস্ট করার এখনই সেরা সুযোগ।</div>
+            </div>
+
+            <!-- PAYMENT INFO -->
+            <div class="payment-info reveal">
+                <h3>💳 পেমেন্ট করার নিয়ম</h3>
+                <div class="pay-method">
+                    <div class="pay-icon pay-bkash">bKash</div>
+                    <div>
+                        <div style="font-weight:600">বিকাশ (সেন্ড মানি)</div>
+                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
+                    </div>
+                </div>
+                <div class="pay-method">
+                    <div class="pay-icon pay-nagad">Nagad</div>
+                    <div>
+                        <div style="font-weight:600">নগদ (সেন্ড মানি)</div>
+                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
+                    </div>
+                </div>
+                <div class="pay-method">
+                    <div class="pay-icon pay-rocket">Rocket</div>
+                    <div>
+                        <div style="font-weight:600">রকেট (সেন্ড মানি)</div>
+                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
+                    </div>
+                </div>
+                <p class="pay-note">✅ ১,৪৯০ টাকা উপরের যেকোনো নম্বরে পেমেন্ট করে নিচের ফর্মটি পূরণ করুন। পেমেন্ট কনফার্ম হলে ১০ মিনিটের মধ্যে কোর্সের এক্সেস আপনার ইমেইলে পাঠানো হবে।</p>
+            </div>
+
+            <!-- CHECKOUT FORM -->
+            <div class="checkout-card reveal">
+                <h3>📝 চেকআউট ফর্ম</h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="name">পূর্ণ নাম *</label>
+                        <input type="text" id="name" name="name" required placeholder="আপনার পূর্ণ নাম লিখুন">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ইমেইল এড্রেস *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">যে নম্বর থেকে পেমেন্ট করেছেন *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="trxid">ট্রানজেকশন আইডি (TrxID) *</label>
+                        <input type="text" id="trxid" name="trxid" required placeholder="পেমেন্টের TrxID দিন">
+                    </div>
+                    <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ অর্ডার সাবমিট করুন</button>
+                    <div class="form-msg" id="formMsg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="sec-finalcta">
+        <div class="sec-inner">
+            <h2>কোর্সে জয়েন করে আপনিও হয়ে উঠুন<br>প্রফেশনাল ও প্রফিটেবল ট্রেডার!</h2>
+            <p>নিজের স্কিল ও ক্যারিয়ারে ইনভেস্ট করার এখনই সেরা সুযোগ। দেরি করবেন না!</p>
+            <a href="#pricing" class="btn-main track-btn">🚀 এখনই এনরোল করুন</a>
+        </div>
+    </section>
+</div>
+
+<!-- ===== THANK YOU PAGE (SAME FILE) ===== -->
+<div id="thankYouPage">
+    <div class="ty-container">
+        <div class="ty-icon">✓</div>
+        <h1>অসংখ্য ধন্যবাদ! 🎉</h1>
+        <p>কোর্সে ইনরোল করার জন্য আপনাকে অসংখ্য ধন্যবাদ। অনুগ্রহ করে অপেক্ষা করুন। পেমেন্ট ভেরিফাই করে আপনার সাথে যোগাযোগ করা হবে।</p>
+        
+        <div class="ty-info-box">
+            <p>⏱️ ভেরিফিকেশন সময়: ১-৬ ঘন্টা</p>
+            <p>📧 কোর্স এক্সেস আপনার ইমেইলে পাঠানো হবে</p>
+            <p>📱 জরুরি প্রয়োজনে হোয়াটসঅ্যাপে যোগাযোগ করুন</p>
+        </div>
+        
+        <button class="ty-btn" onclick="location.reload()">🏠 হোমে ফিরে যান</button>
+    </div>
+</div>
+
+
+<script>
+// ==============================================
+// 1. COUNTDOWN TIMER (24 HOURS AUTO RESET)
+// ==============================================
+(function(){
+    let totalSeconds = 24 * 60 * 60;
+    const hEl = document.getElementById('hours');
+    const mEl = document.getElementById('minutes');
+    const sEl = document.getElementById('seconds');
+    
+    function update(){
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+        hEl.textContent = h.toString().padStart(2,'0');
+        mEl.textContent = m.toString().padStart(2,'0');
+        sEl.textContent = s.toString().padStart(2,'0');
+        if(totalSeconds > 0) totalSeconds--;
+        else totalSeconds = 24 * 60 * 60;
+    }
+    update();
+    setInterval(update, 1000);
+})();
+
+// ==============================================
+// 2. CONFIG
+// ==============================================
+const TELEGRAM_BOT_TOKEN = "8884740329:AAFGZaEyS0Pg7WPj8GoEFoGDNIJsKuFhxeA";
+const TELEGRAM_CHAT_ID = "5650952922";
+
+// ==============================================
+// 3. REVIEW SLIDER
+// ==============================================
+const reviewImages = [
+    "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(1).webp",
+    "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM.webp",
+    "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(2).webp",
+  
+];
+const track = document.getElementById('sliderTrack');
+[...reviewImages, ...reviewImages].forEach(src => {
+    const img = document.createElement('img');
+    img.src = src; img.alt = "Student Review"; img.className = "slide-img"; img.loading = "lazy";
+    track.appendChild(img);
+});
+
+// ==============================================
+// 4. SCROLL REVEAL
+// ==============================================
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('show'); obs.unobserve(e.target)} });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ==============================================
+// 5. SMOOTH SCROLL
+// ==============================================
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth'});
+    })
+});
+
+// ==============================================
+// 6. PIXEL TRACKING - BUTTON CLICKS
+// ==============================================
+document.querySelectorAll('.track-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        if(typeof fbq !== 'undefined') fbq('track', 'AddToCart');
+        if(typeof ttq !== 'undefined') ttq.track('AddToCart');
+    });
+});
+
+// ==============================================
+// 7. FORM SUBMIT → TELEGRAM + PIXEL + THANK YOU
+// ==============================================
+const form = document.getElementById('checkoutForm');
+const submitBtn = document.getElementById('submitBtn');
+const formMsg = document.getElementById('formMsg');
+const landingPage = document.getElementById('landingPage');
+const thankYouPage = document.getElementById('thankYouPage');
+
+form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    
+    // Fire InitiateCheckout Pixel
+    if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
+    if(typeof ttq !== 'undefined') ttq.track('InitiateCheckout');
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const trxid = document.getElementById('trxid').value.trim();
+    
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "⏳ প্রসেস করা হচ্ছে...";
+    formMsg.style.display = "none";
+    
+    const message = `
+🔥 নতুন ফরেক্স কোর্স এনরোলমেন্ট!
+━━━━━━━━━━━━━━━━━━━━
+👤 পূর্ণ নাম: ${name}
+📧 ইমেইল: ${email}
+📱 পেমেন্ট নম্বর: ${phone}
+🆔 ট্রানজেকশন আইডি: ${trxid}
+💰 পরিমাণ: ১,৪৯০ টাকা
+⏰ সময়: ${new Date().toLocaleString('bn-BD')}
+━━━━━━━━━━━━━━━━━━━━
+    `;
+    
+    try {
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: message,
+                parse_mode: 'HTML'
+            })
+        });
+        
+        // Fire Purchase Pixel
+        if(typeof fbq !== 'undefined') fbq('track', 'Purchase', {value: 1490, currency: 'BDT'});
+        if(typeof ttq !== 'undefined') ttq.track('Purchase', {value: 1490, currency: 'BDT'});
+        
+        formMsg.className = "form-msg success";
+        formMsg.textContent = "✅ আপনার অর্ডার সফলভাবে জমা হয়েছে!";
+        form.reset();
+        
+        // Show Thank You Page (Same File)
+        setTimeout(() => {
+            landingPage.style.display = 'none';
+            thankYouPage.style.display = 'block';
+            document.getElementById('countdown-bar').style.display = 'none';
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }, 2000);
+        
+    } catch (err) {
+        formMsg.className = "form-msg error";
+        formMsg.textContent = "❌ কিছু সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।";
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "✅ অর্ডার সাবমিট করুন";
+    }
+});
+</script>
+
+</body>
+</html>
