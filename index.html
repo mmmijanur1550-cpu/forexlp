@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -79,25 +78,9 @@ body{background:#fff;color:#333;line-height:1.7}
 .hero-title{font-size:26px;font-weight:700;color:#0f2c4a;line-height:1.45;margin-bottom:14px}
 .hero-desc{font-size:15px;color:#065f46;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto}
 
-/* ===== VIDEO WRAP - FIXED FOR MOBILE WITH PADDING ===== */
-.video-wrap{
-    width:100%;
-    max-width:620px;
-    margin:0 auto 28px;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 15px 45px rgba(5,150,105,0.2);
-    position:relative;
-    background:#000;
-    padding:0;
-}
-.video-wrap iframe{
-    width:100%;
-    height:350px;
-    display:block;
-    border:none;
-    background:#000;
-}
+/* Video */
+.video-wrap{width:100%;max-width:620px;margin:0 auto 28px;border-radius:16px;overflow:hidden;box-shadow:0 15px 45px rgba(5,150,105,0.2);position:relative;background:#000;padding:0}
+.video-wrap iframe{width:100%;height:350px;display:block;border:none;background:#000}
 
 .offer-tag{background:#059669;color:#fff;font-size:13.5px;font-weight:600;padding:11px 22px;border-radius:50px;display:inline-block;margin-bottom:22px}
 
@@ -183,39 +166,13 @@ body{background:#fff;color:#333;line-height:1.7}
 .price-feat p::before{content:"✓";color:#059669;font-weight:700;font-size:16px}
 .price-warn{margin-top:18px;background:#fffbeb;border:1px dashed #f59e0b;padding:14px;border-radius:12px;font-size:12.5px;color:#78350f;animation:blink 3s infinite}
 
-.payment-info{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:2px solid #fcd34d;border-radius:18px;padding:24px 22px;text-align:left;margin-bottom:22px}
-.payment-info h3{color:#92400e;font-size:18px;margin-bottom:14px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
-.pay-method{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;margin-bottom:10px;font-size:14px}
-.pay-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:11px;flex-shrink:0}
-.pay-bkash{background:#e2136e}
-.pay-nagad{background:#ec4f1b}
-.pay-rocket{background:#8f3a99}
-.pay-note{text-align:center;font-size:13px;color:#78350f;margin-top:14px;padding-top:14px;border-top:1px dashed #fcd34d}
-
-/* ===== CHECKOUT FORM - FIXED FOR MOBILE ZOOM ===== */
+/* Checkout Form */
 .checkout-card{background:#fff;border-radius:20px;padding:30px 22px;text-align:left;box-shadow:0 20px 55px rgba(0,0,0,0.2);border:2px solid #a7f3d0}
 .checkout-card h3{color:#059669;font-size:19px;margin-bottom:20px;text-align:center}
 .form-group{margin-bottom:16px}
 .form-group label{display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:7px}
-/* Input font-size 16px+ to prevent mobile zoom */
-.form-group input{
-    width:100%;
-    padding:14px 16px;
-    border:1.5px solid #d1fae5;
-    border-radius:10px;
-    font-size:16px; /* Minimum 16px to prevent iOS zoom */
-    font-family:inherit;
-    transition:all .3s;
-    background:#f0fdf4;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-.form-group input:focus{
-    outline:none;
-    border-color:#059669;
-    box-shadow:0 0 0 3px rgba(5,150,105,0.15);
-}
+.form-group input{width:100%;padding:14px 16px;border:1.5px solid #d1fae5;border-radius:10px;font-size:16px;font-family:inherit;transition:all .3s;background:#f0fdf4;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+.form-group input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,0.15)}
 .form-msg{padding:12px;border-radius:10px;font-size:13px;margin-top:15px;display:none;text-align:center}
 .form-msg.success{background:#dcfce7;color:#166534;border:1px solid #86efac;display:block}
 .form-msg.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;display:block}
@@ -243,7 +200,7 @@ body{background:#fff;color:#333;line-height:1.7}
 .btn-back{display:inline-block;background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;padding:14px 35px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;margin-top:10px;transition:transform .3s;border:none;cursor:pointer}
 .btn-back:hover{transform:translateY(-3px)}
 
-/* ===== MOBILE OPTIMIZATION ===== */
+/* Mobile */
 @media(max-width:600px){
     .hero-title{font-size:21px}
     .price-new{font-size:44px}
@@ -252,11 +209,9 @@ body{background:#fff;color:#333;line-height:1.7}
     .success-icon{width:75px;height:75px;font-size:38px}
     .cd-box{min-width:48px;padding:5px 8px}
     .cd-num{font-size:18px}
-    /* Video with padding on mobile */
     .video-wrap{padding:0 15px}
     .video-wrap iframe{height:220px}
     .slide-img{width:220px;height:290px}
-    /* Form inputs stay 16px on mobile to prevent zoom */
     .form-group input{font-size:16px}
 }
 </style>
@@ -265,7 +220,7 @@ body{background:#fff;color:#333;line-height:1.7}
 
 <!-- Countdown -->
 <div class="countdown-bar" id="countdownBar">
-    <div class="countdown-text">⚡ ৭০% ছাড়ে — দ্রুত এনরোল করুন!</div>
+    <div class="countdown-text">⚡ ৮০% ছাড়ে — দ্রুত এনরোল করুন!</div>
     <div class="countdown-timer">
         <div class="cd-box"><div class="cd-num" id="cdHours">২৪</div><div class="cd-lbl">ঘন্টা</div></div>
         <div class="cd-sep">:</div>
@@ -281,11 +236,8 @@ body{background:#fff;color:#333;line-height:1.7}
     <!-- Hero -->
     <section class="hero">
         <div class="hero-inner">
-           
             <h1 class="hero-title">কোনো জটিলতা নেই—সহজ ভাষায় শিখুন<br>প্রফেশনাল ফরেক্স ট্রেডিং</h1>
             <p class="hero-desc">৭০%+ উইন রেটের প্রুভেন স্ট্র্যাটেজি এবং লাইফটাইম সাপোর্ট কমিউনিটি</p>
-
-            <!-- Video - Fixed for Mobile with Padding -->
             <div class="video-wrap">
                 <iframe 
                     src="https://www.youtube.com/embed/BnwCzl_qb_w" 
@@ -295,9 +247,7 @@ body{background:#fff;color:#333;line-height:1.7}
                     loading="lazy">
                 </iframe>
             </div>
-
-            
-            <a href="#pricing" class="btn-main btn-track" data-btn-name="Hero CTA">🔥 এখনি ইনরোল করুন — ৭০% স্পেশাল ছাড়ে</a>
+            <a href="#pricing" class="btn-main btn-track" data-btn-name="Hero CTA">🔥 এখনি ইনরোল করুন — ৮০% স্পেশাল ছাড়ে</a>
         </div>
     </section>
 
@@ -374,24 +324,21 @@ body{background:#fff;color:#333;line-height:1.7}
     <section class="sec-review">
         <div class="sec-inner">
             <h2 class="sec-title">📈 আমাদের স্টুডেন্টদের সাকসেস ও রিভিউ<span class="bar"></span></h2>
-            
         </div>
         <div style="overflow:hidden;width:100%;padding:10px 0;">
             <div class="slider-track" id="sliderTrack"></div>
         </div>
     </section>
 
-    
-
     <!-- Pricing + Checkout -->
     <section class="sec-pricing" id="pricing">
         <div class="sec-inner">
             <div class="price-card reveal">
-                <div class="price-badge">🎯 ৭০% স্পেশাল ডিসকাউন্ট</div>
+                <div class="price-badge">🎯 ৮০% স্পেশাল ডিসকাউন্ট</div>
                 <p class="price-old-label">❌ নিয়মিত কোর্স ফি</p>
                 <div class="price-old">৪,৯৯৯ টাকা</div>
-                <div class="price-disc">⚡ ৭০% ছাড়ে মাত্র</div>
-                <div class="price-new"><small>৳</small>১,৪৯০</div>
+                <div class="price-disc">⚡ ৮০% ছাড়ে মাত্র</div>
+                <div class="price-new"><small>৳</small>৯৯০</div>
                 <div class="price-feat">
                     <p>৭টি প্রুভেন ট্রেডিং স্ট্র্যাটেজি</p>
                     <p>A to Z সম্পূর্ণ রোডম্যাপ</p>
@@ -401,34 +348,9 @@ body{background:#fff;color:#333;line-height:1.7}
                 <div class="price-warn">⚠️ স্পেশাল ডিসকাউন্টের এই অফারটি যেকোনো সময় শেষ হয়ে যাবে। নিজের স্কিল ও ক্যারিয়ারে ইনভেস্ট করার এখনই সেরা সুযোগ।</div>
             </div>
 
-            <div class="payment-info reveal">
-                <h3>💳 পেমেন্ট করার নিয়ম</h3>
-                <div class="pay-method">
-                    <div class="pay-icon pay-bkash">bKash</div>
-                    <div>
-                        <div style="font-weight:600">বিকাশ (সেন্ড মানি)</div>
-                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
-                    </div>
-                </div>
-                <div class="pay-method">
-                    <div class="pay-icon pay-nagad">Nagad</div>
-                    <div>
-                        <div style="font-weight:600">নগদ (সেন্ড মানি)</div>
-                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
-                    </div>
-                </div>
-                <div class="pay-method">
-                    <div class="pay-icon pay-rocket">Rocket</div>
-                    <div>
-                        <div style="font-weight:600">রকেট (সেন্ড মানি)</div>
-                        <div style="color:#059669;font-weight:600;font-size:16px">01717351536</div>
-                    </div>
-                </div>
-                <p class="pay-note">✅ ১,৪৯০ টাকা উপরের যেকোনো নম্বরে পেমেন্ট করে নিচের ফর্মটি পূরণ করুন। পেমেন্ট কনফার্ম হলে ১০ মিনিটের মধ্যে কোর্সের এক্সেস আপনার ইমেইলে পাঠানো হবে।</p>
-            </div>
-
+            <!-- ✅ Checkout Form — trxid ফিল্ড রিমুভ করা হয়েছে -->
             <div class="checkout-card reveal">
-                <h3>📝 চেকআউট ফর্ম</h3>
+                <h3>ফরমটি সবমিট করার পর, আপনার WhatsApp নাম্বারে যোগাযোগ করা হবে</h3>
                 <form id="checkoutForm">
                     <div class="form-group">
                         <label for="name">পূর্ণ নাম *</label>
@@ -439,14 +361,10 @@ body{background:#fff;color:#333;line-height:1.7}
                         <input type="email" id="email" name="email" required placeholder="example@email.com" autocomplete="email">
                     </div>
                     <div class="form-group">
-                        <label for="phone">যে নম্বর থেকে পেমেন্ট করেছেন *</label>
+                        <label for="phone">WhatsApp নাম্বার *</label>
                         <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX" autocomplete="tel" pattern="[0-9]*" inputmode="numeric">
                     </div>
-                    <div class="form-group">
-                        <label for="trxid">ট্রানজেকশন আইডি (TrxID) *</label>
-                        <input type="text" id="trxid" name="trxid" required placeholder="পেমেন্টের TrxID দিন" autocomplete="off">
-                    </div>
-                    <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ অর্ডার সাবমিট করুন</button>
+                    <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ এনরোল করতে চাই, সাবমিট করুন</button>
                     <div class="form-msg" id="formMsg"></div>
                 </form>
             </div>
@@ -463,7 +381,6 @@ body{background:#fff;color:#333;line-height:1.7}
         </div>
     </section>
 
-   
 </div>
 
 <!-- Thank You Section -->
@@ -472,23 +389,16 @@ body{background:#fff;color:#333;line-height:1.7}
         <div class="success-icon">✓</div>
         <h1 class="thank-title">অসংখ্য ধন্যবাদ!</h1>
         <p class="thank-subtitle">🎉 আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে</p>
-        
         <div class="thank-msg">
-            কোর্সে ইনরোল করার জন্য আপনাকে <strong>অসংখ্য ধন্যবাদ</strong>। অনুগ্রহ করে অপেক্ষা করুন। পেমেন্ট ভেরিফাই করে আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
+            কোর্সে ইনরোল করার জন্য আপনাকে <strong>অসংখ্য ধন্যবাদ</strong>। অনুগ্রহ করে অপেক্ষা করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
         </div>
-        
         <div class="info-box">
             <h4>📋 পরবর্তী ধাপসমূহ:</h4>
             <ul>
-                <li>আমাদের টিম আপনার পেমেন্ট ভেরিফাই করবে</li>
-                <li>১-৬ ঘন্টার মধ্যে আপনার সাথে যোগাযোগ করা হবে</li>
-                <li>কোর্সের সম্পূর্ণ এক্সেস আপনার ইমেইলে পাঠানো হবে</li>
-                <li>প্রাইভেট কমিউনিটি গ্রুপের লিংক পেয়ে যাবেন</li>
+                <li>১-৬ ঘন্টার মধ্যে আপনার WhatsApp নাম্বারে যোগাযোগ করা হবে</li>
             </ul>
         </div>
-        
         <button onclick="location.reload()" class="btn-back">🔄 হোমপেজে ফিরে যান</button>
-        
         <div style="margin-top:25px;padding-top:25px;border-top:1px dashed #cbd5e1">
             <p style="font-size:13px;color:#666;margin-bottom:8px">জরুরি প্রয়োজনে Whatsapp:</p>
             <p style="font-size:14px"><a href="https://wa.me/01724127186" style="color:#059669;text-decoration:none;font-weight:600">+880 1724-127186</a></p>
@@ -497,40 +407,40 @@ body{background:#fff;color:#333;line-height:1.7}
 </div>
 
 <script>
-// Telegram Config
-const TELEGRAM_BOT_TOKEN = "8884740329:AAFGZaEyS0Pg7WPj8GoEFoGDNIJsKuFhxeA";
-const TELEGRAM_CHAT_ID = "5650952922";
-const PRODUCT_VALUE = 1490;
+// Config
+const TELEGRAM_BOT_TOKEN = "8571958771:AAEEy3tGi3iVvLd35wbDYDtytI3PiM5Xo74";
+const TELEGRAM_CHAT_ID = "8740770031";
+const PRODUCT_VALUE = 990;
 const CURRENCY = "BDT";
 const PRODUCT_NAME = "Forex Trading Course";
 
-// Countdown Timer
-function toBnNum(num){
+// Countdown
+function toBnNum(num) {
     const en = "0123456789", bn = "০১২৩৪৫৬৭৮৯";
     return String(num).split('').map(d => bn[en.indexOf(d)] || d).join('');
 }
 
-function startCountdown(){
+function startCountdown() {
     let endTime = localStorage.getItem('cdEndTime');
     const now = Date.now();
-    if(!endTime || parseInt(endTime) <= now){
+    if (!endTime || parseInt(endTime) <= now) {
         endTime = now + (24 * 60 * 60 * 1000);
         localStorage.setItem('cdEndTime', endTime);
     }
     endTime = parseInt(endTime);
-    
-    function update(){
+
+    function update() {
         const remaining = endTime - Date.now();
-        if(remaining <= 0){
+        if (remaining <= 0) {
             endTime = Date.now() + (24 * 60 * 60 * 1000);
             localStorage.setItem('cdEndTime', endTime);
         }
         const h = Math.floor(remaining / (1000 * 60 * 60));
         const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
         const s = Math.floor((remaining % (1000 * 60)) / 1000);
-        document.getElementById('cdHours').textContent = toBnNum(String(h).padStart(2,'0'));
-        document.getElementById('cdMinutes').textContent = toBnNum(String(m).padStart(2,'0'));
-        document.getElementById('cdSeconds').textContent = toBnNum(String(s).padStart(2,'0'));
+        document.getElementById('cdHours').textContent = toBnNum(String(h).padStart(2, '0'));
+        document.getElementById('cdMinutes').textContent = toBnNum(String(m).padStart(2, '0'));
+        document.getElementById('cdSeconds').textContent = toBnNum(String(s).padStart(2, '0'));
     }
     update();
     setInterval(update, 1000);
@@ -542,23 +452,25 @@ const reviewImages = [
     "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(2).webp",
     "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM%20(1).webp",
     "https://pub-23d90da0eb284a7aa868021bf688efe4.r2.dev/Forex%20Course/WhatsApp%20Image%202026-06-19%20at%201.09.51%20AM.webp",
-    
 ];
 const track = document.getElementById('sliderTrack');
 [...reviewImages, ...reviewImages].forEach(src => {
     const img = document.createElement('img');
-    img.src = src; img.alt = "Review"; img.className = "slide-img"; img.loading = "lazy";
+    img.src = src;
+    img.alt = "Review";
+    img.className = "slide-img";
+    img.loading = "lazy";
     track.appendChild(img);
 });
 
-// Scroll Reveal - Mobile Safe
+// Scroll Reveal
 function initReveal() {
     const reveals = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
         reveals.forEach(el => el.classList.add('anim-ready'));
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => {
-                if(e.isIntersecting){
+                if (e.isIntersecting) {
                     e.target.classList.add('show');
                     obs.unobserve(e.target);
                 }
@@ -573,32 +485,32 @@ function initReveal() {
 initReveal();
 
 // Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',function(e){
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if(target) target.scrollIntoView({behavior:'smooth'});
-    })
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
 });
 
 // Pixel Helpers
-function fireFB(event, data){ if(typeof fbq === 'function'){ try { fbq('track', event, data || {}); } catch(e){} } }
-function fireTT(event, data){ if(typeof ttq !== 'undefined'){ try { ttq.track(event, data || {}); } catch(e){} } }
+function fireFB(event, data) { if (typeof fbq === 'function') { try { fbq('track', event, data || {}); } catch (e) {} } }
+function fireTT(event, data) { if (typeof ttq !== 'undefined') { try { ttq.track(event, data || {}); } catch (e) {} } }
 
-// Button Clicks
+// Button Click Tracking
 document.querySelectorAll('.btn-track').forEach(btn => {
-    btn.addEventListener('click', function(){
+    btn.addEventListener('click', function () {
         const btnName = this.dataset.btnName || 'CTA Button';
         fireFB('Lead', { content_name: btnName });
         fireTT('ClickButton', { content_name: btnName });
     });
 });
 
-// Initiate Checkout
+// Initiate Checkout tracking
 let checkoutInitiated = false;
 document.querySelectorAll('#checkoutForm input').forEach(input => {
-    input.addEventListener('focus', function(){
-        if(!checkoutInitiated){
+    input.addEventListener('focus', function () {
+        if (!checkoutInitiated) {
             checkoutInitiated = true;
             fireFB('InitiateCheckout', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
             fireTT('InitiateCheckout', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
@@ -614,40 +526,57 @@ const mainContent = document.getElementById('mainContent');
 const thankYouSection = document.getElementById('thankYouSection');
 const countdownBar = document.getElementById('countdownBar');
 
-form.addEventListener('submit', async function(e){
+form.addEventListener('submit', async function (e) {
     e.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const trxid = document.getElementById('trxid').value.trim();
-    
+
     submitBtn.disabled = true;
     submitBtn.innerHTML = "⏳ প্রসেস করা হচ্ছে...";
     formMsg.style.display = "none";
-    
-    const message = `🔥 <b>নতুন ফরেক্স কোর্স এনরোলমেন্ট!</b>\n━━━━━━━━━━━━━━━━━━\n👤 <b>নাম:</b> ${name}\n📧 <b>ইমেইল:</b> ${email}\n📱 <b>পেমেন্ট নম্বর:</b> ${phone}\n🆔 <b>TrxID:</b> ${trxid}\n💰 <b>পরিমাণ:</b> ১,৪৯০ টাকা\n⏰ <b>সময়:</b> ${new Date().toLocaleString('en-GB', {timeZone:'Asia/Dhaka'})}\n━━━━━━━━━━━━━━━━━━`;
-    
+
+    const message = `🔥 <b>নতুন ফরেক্স কোর্স এনরোলমেন্ট!</b>
+━━━━━━━━━━━━━━━━━━
+👤 <b>নাম:</b> ${name}
+📧 <b>ইমেইল:</b> ${email}
+📱 <b>WhatsApp নম্বর:</b> ${phone}
+💰 <b>কোর্স ফি:</b> ৯৯০ টাকা
+⏰ <b>সময়:</b> ${new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dhaka' })}
+━━━━━━━━━━━━━━━━━━`;
+
     try {
         const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message, parse_mode: 'HTML' })
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text: message,
+                parse_mode: 'HTML'
+            })
         });
         const data = await response.json();
-        
-        if(data.ok){
+
+        if (data.ok) {
+            // Fire pixels
             fireFB('Purchase', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
             fireTT('CompletePayment', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
+
+            // Show Thank You
             mainContent.style.display = 'none';
             countdownBar.style.display = 'none';
             thankYouSection.classList.add('show');
             window.scrollTo(0, 0);
-        } else { throw new Error(data.description || 'Failed'); }
+        } else {
+            throw new Error(data.description || 'Telegram API error');
+        }
     } catch (err) {
         formMsg.className = "form-msg error";
         formMsg.textContent = "❌ কিছু সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।";
+        formMsg.style.display = "block";
         submitBtn.disabled = false;
-        submitBtn.innerHTML = "✅ অর্ডার সাবমিট করুন";
+        submitBtn.innerHTML = "✅ এনরোল করতে চাই, সাবমিট করুন";
     }
 });
 </script>
