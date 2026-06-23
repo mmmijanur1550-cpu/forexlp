@@ -261,6 +261,46 @@ body{background:#fff;color:#333;line-height:1.7}
 .btn-back{display:inline-block;background:linear-gradient(135deg,#0f2c4a,#059669);color:#fff;padding:14px 35px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;margin-top:10px;transition:transform .3s;border:none;cursor:pointer}
 .btn-back:hover{transform:translateY(-3px)}
 
+/* ===== YouTube Video Slider ===== */
+.sec-vid-slider{background:#B2F1D4;padding:30px 0}
+.sec-vid-slider .sec-title{color:#0f2c4a}
+.sec-vid-slider .sec-title .bar{background:linear-gradient(90deg,#059669,#10b981)}
+.sec-vid-slider .sec-sub{color:#065f46}
+.sec-vid-slider .sec-inner{max-width:1100px;margin-bottom:12px}
+
+.vslider-wrapper{position:relative;padding:0 36px}
+.vslider-viewport{overflow:hidden;border-radius:12px}
+.vslider-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);will-change:transform}
+
+/* Each slide: 1/3 width desktop, full width mobile */
+.vslide{flex:0 0 calc(33.333% - 8px);margin:0 4px;position:relative}
+.vslide-inner{position:relative;width:100%;padding-bottom:100%;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.2);border:2px solid rgba(5,150,105,0.25);transition:border-color .3s,box-shadow .3s}
+.vslide-inner:hover{border-color:rgba(5,150,105,0.7);box-shadow:0 10px 28px rgba(0,0,0,0.3)}
+.vslide-inner iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block}
+
+/* Thumbnail overlay (before play) */
+.vslide-thumb{position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;z-index:2;background:#000}
+.vslide-thumb img{width:100%;height:100%;object-fit:cover;opacity:0.85;transition:opacity .3s}
+.vslide-thumb:hover img{opacity:1}
+.vslide-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:rgba(220,38,38,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s,background .3s;box-shadow:0 4px 16px rgba(220,38,38,0.5)}
+.vslide-thumb:hover .vslide-play{transform:translate(-50%,-50%) scale(1.1);background:#dc2626}
+.vslide-play svg{width:20px;height:20px;fill:#fff;margin-left:3px}
+.vslide-title{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,0.82),transparent);color:#fff;font-size:12px;font-weight:600;padding:22px 10px 9px;z-index:3;line-height:1.4}
+
+/* Arrow buttons — ছোট, ভিডিওর পাশে ভাসমান */
+.vslider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;background:#059669;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,0.25);transition:transform .2s,background .2s;flex-shrink:0}
+.vslider-arrow:hover{transform:translateY(-50%) scale(1.1);background:#047857}
+.vslider-arrow:active{transform:translateY(-50%) scale(0.93)}
+.vslider-arrow svg{width:16px;height:16px;fill:#fff}
+.vslider-prev{left:2px}
+.vslider-next{right:2px}
+.vslider-arrow:disabled{opacity:0.3;cursor:not-allowed;transform:translateY(-50%)}
+
+/* Dots */
+.vslider-dots{display:flex;justify-content:center;gap:6px;margin-top:12px}
+.vdot{width:7px;height:7px;border-radius:50%;background:rgba(5,150,105,0.3);border:none;cursor:pointer;transition:all .3s;padding:0}
+.vdot.active{background:#059669;width:20px;border-radius:3px}
+
 /* Mobile */
 @media(max-width:600px){
     .hero-title{font-size:21px}
@@ -274,6 +314,11 @@ body{background:#fff;color:#333;line-height:1.7}
     .video-wrap iframe{height:220px}
     .slide-img{width:220px;height:290px}
     .form-group input{font-size:16px}
+    /* Video slider mobile — 1 column */
+    .vslide{flex:0 0 calc(100% - 8px)}
+    .vslider-arrow{width:26px;height:26px}
+    .vslider-arrow svg{width:14px;height:14px}
+    .vslider-wrapper{padding:0 32px}
 }
 </style>
 </head>
@@ -344,24 +389,31 @@ body{background:#fff;color:#333;line-height:1.7}
 
 
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-inner">
-            
-            <div class="video-wrap">
-                <iframe 
-                    src="https://www.youtube.com/embed/ua_Tneh-jEM" 
-                    title="কোর্স ভিডিও" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
-            
+
+
+
+
+    <!-- ===== YouTube Video Slider ===== -->
+    <section class="section sec-vid-slider" id="videoSliderSection">
+        <div class="sec-inner">
+            <h2 class="sec-title">🎬 কোর্সের ফ্রি প্রিভিউ ভিডিও<span class="bar"></span></h2>
+            <p class="sec-sub">কোর্স সম্পর্কে আরও জানতে ভিডিওগুলো দেখুন</p>
         </div>
+        <div class="vslider-wrapper">
+            <button class="vslider-arrow vslider-prev" id="vPrev" aria-label="আগের ভিডিও">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <div class="vslider-viewport">
+                <div class="vslider-track" id="vTrack">
+                    <!-- ভিডিও কার্ডগুলো JavaScript দিয়ে লোড হবে -->
+                </div>
+            </div>
+            <button class="vslider-arrow vslider-next" id="vNext" aria-label="পরের ভিডিও">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+        </div>
+        <div class="vslider-dots" id="vDots"></div>
     </section>
-
-
 
     <!-- Support -->
     <section class="section sec-support">
@@ -490,8 +542,17 @@ body{background:#fff;color:#333;line-height:1.7}
 
 <script>
 // Config
-const TELEGRAM_BOT_TOKEN = "8571958771:AAEEy3tGi3iVvLd35wbDYDtytI3PiM5Xo74";
-const TELEGRAM_CHAT_ID = "8740770031";
+// ✅ Telegram Dual Bot Config
+const TELEGRAM_BOTS = [
+    {
+        token: "8571958771:AAEEy3tGi3iVvLd35wbDYDtytI3PiM5Xo74", // বট ১
+        chat_id: "8740770031"
+    },
+    {
+        token: "8767167432:AAF7c0YN2KBZipzdaBFKe3fC9iB6Kkjtmuc", // বট ২ token এখানে দিন
+        chat_id: "5650952922"  // বট ২ chat ID এখানে দিন
+    }
+];
 const PRODUCT_VALUE = 990;
 const CURRENCY = "BDT";
 const PRODUCT_NAME = "Forex Trading Course";
@@ -566,6 +627,166 @@ function initReveal() {
 }
 initReveal();
 
+// ===== YouTube Video Slider =====
+(function() {
+    // ✅ এখানে YouTube ভিডিও লিংক যুক্ত করুন
+    const videos = [
+        { id: 'S8kP2GjFIqg', title: 'ফরেক্স ট্রেডিং পরিচিতি' },
+        { id: 'zw494ampvn0', title: 'অর্ডার ব্লক স্ট্র্যাটেজি' },
+        { id: '8yVXi9G9-TQ', title: 'FVG Trading Strategy' },
+        
+        { id: 'ua_Tneh-jEM', title: 'মার্কেট স্ট্রাকচার' },
+    ];
+
+    const VISIBLE = window.innerWidth <= 600 ? 1 : 3; // mobile=1, desktop=3
+    const track = document.getElementById('vTrack');
+    const dotsContainer = document.getElementById('vDots');
+    const btnPrev = document.getElementById('vPrev');
+    const btnNext = document.getElementById('vNext');
+
+    let currentIndex = 0;
+    let autoTimer = null;
+    let isPlaying = false; // কোনো ভিডিও চলছে কিনা
+
+    function getVisible() {
+        return window.innerWidth <= 600 ? 1 : 3;
+    }
+
+    function totalSlides() {
+        return Math.ceil(videos.length / getVisible());
+    }
+
+    // ভিডিও কার্ড তৈরি
+    function buildSlides() {
+        track.innerHTML = '';
+        videos.forEach((v, i) => {
+            const thumbUrl = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+            const slide = document.createElement('div');
+            slide.className = 'vslide';
+            slide.innerHTML = `
+                <div class="vslide-inner">
+                    <div class="vslide-thumb" id="vthumb-${i}" data-idx="${i}" data-vid="${v.id}">
+                        <img src="${thumbUrl}" alt="${v.title}" loading="lazy">
+                        <div class="vslide-play">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="vslide-title">${v.title}</div>
+                    </div>
+                    <iframe id="vframe-${i}"
+                        src=""
+                        data-src="https://www.youtube.com/embed/${v.id}?enablejsapi=1&autoplay=1&rel=0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        style="display:none">
+                    </iframe>
+                </div>`;
+            track.appendChild(slide);
+        });
+
+        // Thumbnail ক্লিকে ভিডিও চালু
+        document.querySelectorAll('.vslide-thumb').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const idx = parseInt(this.dataset.idx);
+                const frame = document.getElementById(`vframe-${idx}`);
+                // iframe src সেট করে play
+                frame.src = frame.dataset.src;
+                frame.style.display = 'block';
+                this.style.display = 'none';
+                // অটো স্লাইড থামাও
+                isPlaying = true;
+                stopAuto();
+            });
+        });
+    }
+
+    // Dots তৈরি
+    function buildDots() {
+        dotsContainer.innerHTML = '';
+        const total = totalSlides();
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'vdot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `স্লাইড ${i + 1}`);
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateDots() {
+        document.querySelectorAll('.vdot').forEach((d, i) => {
+            d.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    function updateArrows() {
+        btnPrev.disabled = currentIndex === 0;
+        btnNext.disabled = currentIndex >= totalSlides() - 1;
+    }
+
+    function goTo(idx) {
+        const vis = getVisible();
+        const total = totalSlides();
+        currentIndex = Math.max(0, Math.min(idx, total - 1));
+        // slide width = 1/vis of viewport
+        const slideW = track.parentElement.offsetWidth / vis;
+        track.style.transform = `translateX(-${currentIndex * slideW * vis}px)`;
+        updateDots();
+        updateArrows();
+    }
+
+    function next() {
+        if (currentIndex < totalSlides() - 1) goTo(currentIndex + 1);
+        else goTo(0); // loop
+    }
+
+    function prev() {
+        if (currentIndex > 0) goTo(currentIndex - 1);
+        else goTo(totalSlides() - 1);
+    }
+
+    function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(() => {
+            if (!isPlaying) next();
+        }, 4000);
+    }
+
+    function stopAuto() {
+        if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+
+    // YouTube postMessage API — ভিডিও pause হলে আবার auto শুরু
+    window.addEventListener('message', function(e) {
+        try {
+            const data = JSON.parse(e.data);
+            if (data.event === 'onStateChange') {
+                // state 1 = playing, state 2 = paused, state 0 = ended
+                if (data.info === 1) { isPlaying = true; stopAuto(); }
+                if (data.info === 2 || data.info === 0) { isPlaying = false; startAuto(); }
+            }
+        } catch(err) {}
+    });
+
+    btnPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+    btnNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+
+    // Responsive resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            buildDots();
+            goTo(0);
+        }, 200);
+    });
+
+    // Init
+    buildSlides();
+    buildDots();
+    updateArrows();
+    startAuto();
+})();
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
@@ -629,18 +850,24 @@ form.addEventListener('submit', async function (e) {
 ━━━━━━━━━━━━━━━━━━`;
 
     try {
-        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: message,
-                parse_mode: 'HTML'
-            })
-        });
-        const data = await response.json();
+        // দুইটি বটে একসাথে মেসেজ পাঠাও
+        const sendRequests = TELEGRAM_BOTS.map(bot =>
+            fetch(`https://api.telegram.org/bot${bot.token}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: bot.chat_id,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            }).then(r => r.json())
+        );
 
-        if (data.ok) {
+        const results = await Promise.allSettled(sendRequests);
+        // অন্তত একটি বট সফল হলেই সাকসেস দেখাও
+        const anyOk = results.some(r => r.status === 'fulfilled' && r.value && r.value.ok);
+
+        if (anyOk) {
             // Fire pixels
             fireFB('Purchase', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
             fireTT('CompletePayment', { content_name: PRODUCT_NAME, value: PRODUCT_VALUE, currency: CURRENCY });
@@ -651,7 +878,7 @@ form.addEventListener('submit', async function (e) {
             thankYouSection.classList.add('show');
             window.scrollTo(0, 0);
         } else {
-            throw new Error(data.description || 'Telegram API error');
+            throw new Error('Telegram send failed');
         }
     } catch (err) {
         formMsg.className = "form-msg error";
