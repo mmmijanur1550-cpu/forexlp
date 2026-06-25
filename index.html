@@ -484,7 +484,7 @@ body{background:#fff;color:#333;line-height:1.7}
 
             <!-- ✅ Checkout Form — trxid ফিল্ড রিমুভ করা হয়েছে -->
             <div class="checkout-card reveal">
-                <h3>ফরমটি সবমিট করার পর, আপনার WhatsApp নাম্বারে যোগাযোগ করা হবে</h3>
+                <h3>রেজিষ্ট্রেশন করার পর, আপনার WhatsApp নাম্বারে যোগাযোগ করা হবে</h3>
                 <form id="checkoutForm">
                     <div class="form-group">
                         <label for="name">পূর্ণ নাম *</label>
@@ -498,7 +498,7 @@ body{background:#fff;color:#333;line-height:1.7}
                         <label for="phone">WhatsApp নাম্বার *</label>
                         <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX" autocomplete="tel" pattern="[0-9]*" inputmode="numeric">
                     </div>
-                    <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ এনরোল করতে চাই, সাবমিট করুন</button>
+                    <button type="submit" class="btn-main" id="submitBtn" style="width:100%;margin-top:5px">✅ কোর্সে রেজিষ্ট্রেশন করুন</button>
                     <div class="form-msg" id="formMsg"></div>
                 </form>
             </div>
@@ -522,16 +522,11 @@ body{background:#fff;color:#333;line-height:1.7}
     <div class="thank-card">
         <div class="success-icon">✓</div>
         <h1 class="thank-title">অসংখ্য ধন্যবাদ!</h1>
-        <p class="thank-subtitle">🎉 আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে</p>
+        <p class="thank-subtitle">🎉 আপনার রেজিষ্ট্রেশন সফল হয়েছে</p>
         <div class="thank-msg">
-            কোর্সে ইনরোল করার জন্য আপনাকে <strong>অসংখ্য ধন্যবাদ</strong>। অনুগ্রহ করে অপেক্ষা করুন। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
+            কোর্সে ইনরোল করার জন্য আপনাকে <strong>অসংখ্য ধন্যবাদ</strong>। অনুগ্রহ করে অপেক্ষা করুন।<span style="color: red;">আমরা শীঘ্রই আপনার WhatsApp নাম্বারে যোগাযোগ করবো</span>
         </div>
-        <div class="info-box">
-            <h4>📋 পরবর্তী ধাপসমূহ:</h4>
-            <ul>
-                <li>১-৬ ঘন্টার মধ্যে আপনার WhatsApp নাম্বারে যোগাযোগ করা হবে</li>
-            </ul>
-        </div>
+        
         <button onclick="location.reload()" class="btn-back">🔄 হোমপেজে ফিরে যান</button>
         <div style="margin-top:25px;padding-top:25px;border-top:1px dashed #cbd5e1">
             <p style="font-size:13px;color:#666;margin-bottom:8px">জরুরি প্রয়োজনে Whatsapp:</p>
@@ -635,7 +630,7 @@ initReveal();
         { id: 'zw494ampvn0', title: 'অর্ডার ব্লক স্ট্র্যাটেজি' },
         { id: '8yVXi9G9-TQ', title: 'FVG Trading Strategy' },
         
-        { id: 'ua_Tneh-jEM', title: 'মার্কেট স্ট্রাকচার' },
+        
     ];
 
     const VISIBLE = window.innerWidth <= 600 ? 1 : 3; // mobile=1, desktop=3
@@ -891,7 +886,7 @@ form.addEventListener('submit', async function (e) {
 </script>
 
 <!-- WhatsApp Floating Button -->
-<a class="wa-float" href="https://wa.me/8801724127186?text=আমি%20ফরেক্স%20ট্রেডিং%20কোর্স%20সম্পর্কে%20জানতে%20চাই" target="_blank" rel="noopener" aria-label="WhatsApp এ চ্যাট করুন">
+<a class="wa-float" href="https://wa.me/8801724127186?text=কোর্সে%20জয়েন%20হওয়ার%20প্রসেস%20কি?" target="_blank" rel="noopener" aria-label="WhatsApp এ চ্যাট করুন">
     <span class="wa-label">💬 চ্যাট করুন</span>
     <span class="wa-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
